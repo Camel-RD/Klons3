@@ -13,6 +13,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationDefaultFont>Microsoft Sans Serif, 10pt</ApplicationDefaultFont>
+    <ApplicationIcon>Pics\Icon1.ico</ApplicationIcon>
+    <StartupObject>KlonsF.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="DB\**" />
@@ -27,6 +29,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="SQL\SQLV301.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pics\Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="SQL\SQLV301.txt" />
@@ -47,6 +52,7 @@
     <ProjectReference Include="..\DataObjects\DataObjects.csproj" />
     <ProjectReference Include="..\DataSets\DataSets.csproj" />
     <ProjectReference Include="..\KlonsLIB\KlonsLIB.csproj" />
+    <ProjectReference Include="..\MyReportLib\MyReportLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,7 +87,6 @@
   <ItemGroup>
     <Folder Include="FormsP\" />
     <Folder Include="FormsA\" />
-    <Folder Include="Pics\" />
   </ItemGroup>
 
   <ItemGroup>

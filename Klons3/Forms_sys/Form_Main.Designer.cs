@@ -31,10 +31,13 @@ namespace KlonsF
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             menuStrip1 = new MenuStrip();
             miSistēma = new ToolStripMenuItem();
             miNomainītSaimniecību = new ToolStripMenuItem();
+            toolStripSeparator23 = new ToolStripSeparator();
             miKāStrādāsim = new ToolStripMenuItem();
+            miShowWindowList = new ToolStripMenuItem();
             toolStripSeparator5 = new ToolStripSeparator();
             miFDatuLabojumuReģistri = new ToolStripMenuItem();
             miFDokumentuLabojumi = new ToolStripMenuItem();
@@ -44,6 +47,15 @@ namespace KlonsF
             miFDatuEksports = new ToolStripMenuItem();
             miFDatuImports = new ToolStripMenuItem();
             toolStripSeparator6 = new ToolStripSeparator();
+            miAtvērtProgrammasMapi = new ToolStripMenuItem();
+            miAtvērtRezervesKopijuMapi = new ToolStripMenuItem();
+            miReloadDB = new ToolStripMenuItem();
+            miReloadDataF = new ToolStripMenuItem();
+            miReloadDataA = new ToolStripMenuItem();
+            miReloadDataP = new ToolStripMenuItem();
+            miReloadDataM = new ToolStripMenuItem();
+            toolStripSeparator21 = new ToolStripSeparator();
+            miAizvērt = new ToolStripMenuItem();
             form1ToolStripMenuItem = new ToolStripMenuItem();
             miFReģistri = new ToolStripMenuItem();
             miFDokumenti = new ToolStripMenuItem();
@@ -197,24 +209,13 @@ namespace KlonsF
             miMParams = new ToolStripMenuItem();
             miLogi = new ToolStripMenuItem();
             miCloseMDIForm = new ToolStripMenuItem();
+            miInfo = new ToolStripMenuItem();
+            miFApraksts = new ToolStripMenuItem();
+            toolStripSeparator22 = new ToolStripSeparator();
+            miParProgrammu = new ToolStripMenuItem();
             aDownloader1 = new KlonsLIB.Components.ADownloader();
             tsWindowList = new ToolStrip();
             myStyleDefs = new KlonsP.Classes.MyStyleDefs();
-            miShowWindowList = new ToolStripMenuItem();
-            miAtvērtProgrammasMapi = new ToolStripMenuItem();
-            miAtvērtRezervesKopijuMapi = new ToolStripMenuItem();
-            miReloadDB = new ToolStripMenuItem();
-            miReloadDataF = new ToolStripMenuItem();
-            miReloadDataA = new ToolStripMenuItem();
-            miReloadDataM = new ToolStripMenuItem();
-            miReloadDataP = new ToolStripMenuItem();
-            miAizvērt = new ToolStripMenuItem();
-            toolStripSeparator21 = new ToolStripSeparator();
-            miInfo = new ToolStripMenuItem();
-            miFApraksts = new ToolStripMenuItem();
-            miParProgrammu = new ToolStripMenuItem();
-            toolStripSeparator22 = new ToolStripSeparator();
-            toolStripSeparator23 = new ToolStripSeparator();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -243,12 +244,24 @@ namespace KlonsF
             miNomainītSaimniecību.Text = "Nomainīt saimniecību";
             miNomainītSaimniecību.Click += miNomainītSaimniecību_Click;
             // 
+            // toolStripSeparator23
+            // 
+            toolStripSeparator23.Name = "toolStripSeparator23";
+            toolStripSeparator23.Size = new Size(301, 6);
+            // 
             // miKāStrādāsim
             // 
             miKāStrādāsim.Name = "miKāStrādāsim";
             miKāStrādāsim.Size = new Size(304, 24);
             miKāStrādāsim.Text = "Kā strādāsim?";
             miKāStrādāsim.Click += miKāStrādāsim_Click;
+            // 
+            // miShowWindowList
+            // 
+            miShowWindowList.Name = "miShowWindowList";
+            miShowWindowList.Size = new Size(304, 24);
+            miShowWindowList.Text = "Rādīt atvērto logu sarakstu";
+            miShowWindowList.Click += miShowWindowList_Click;
             // 
             // toolStripSeparator5
             // 
@@ -306,6 +319,67 @@ namespace KlonsF
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
             toolStripSeparator6.Size = new Size(301, 6);
+            // 
+            // miAtvērtProgrammasMapi
+            // 
+            miAtvērtProgrammasMapi.Name = "miAtvērtProgrammasMapi";
+            miAtvērtProgrammasMapi.Size = new Size(304, 24);
+            miAtvērtProgrammasMapi.Text = "Atvērt programmas mapi";
+            miAtvērtProgrammasMapi.Click += miAtvērtProgrammasMapi_Click;
+            // 
+            // miAtvērtRezervesKopijuMapi
+            // 
+            miAtvērtRezervesKopijuMapi.Name = "miAtvērtRezervesKopijuMapi";
+            miAtvērtRezervesKopijuMapi.Size = new Size(304, 24);
+            miAtvērtRezervesKopijuMapi.Text = "Atvērt rezerves kopiju mapi";
+            miAtvērtRezervesKopijuMapi.Click += miAtvērtRezervesKopijuMapi_Click;
+            // 
+            // miReloadDB
+            // 
+            miReloadDB.DropDownItems.AddRange(new ToolStripItem[] { miReloadDataF, miReloadDataA, miReloadDataP, miReloadDataM });
+            miReloadDB.Name = "miReloadDB";
+            miReloadDB.Size = new Size(304, 24);
+            miReloadDB.Text = "Atkārtoti ielādēt datus no datu bāzes";
+            // 
+            // miReloadDataF
+            // 
+            miReloadDataF.Name = "miReloadDataF";
+            miReloadDataF.Size = new Size(157, 24);
+            miReloadDataF.Text = "Finanses";
+            miReloadDataF.Click += miReloadDataF_Click;
+            // 
+            // miReloadDataA
+            // 
+            miReloadDataA.Name = "miReloadDataA";
+            miReloadDataA.Size = new Size(157, 24);
+            miReloadDataA.Text = "Algas";
+            miReloadDataA.Click += miReloadDataA_Click;
+            // 
+            // miReloadDataP
+            // 
+            miReloadDataP.Name = "miReloadDataP";
+            miReloadDataP.Size = new Size(157, 24);
+            miReloadDataP.Text = "Pamatlīdzekļi";
+            miReloadDataP.Click += miReloadDataP_Click;
+            // 
+            // miReloadDataM
+            // 
+            miReloadDataM.Name = "miReloadDataM";
+            miReloadDataM.Size = new Size(157, 24);
+            miReloadDataM.Text = "Noliktava";
+            miReloadDataM.Click += miReloadDataM_Click;
+            // 
+            // toolStripSeparator21
+            // 
+            toolStripSeparator21.Name = "toolStripSeparator21";
+            toolStripSeparator21.Size = new Size(301, 6);
+            // 
+            // miAizvērt
+            // 
+            miAizvērt.Name = "miAizvērt";
+            miAizvērt.Size = new Size(304, 24);
+            miAizvērt.Text = "Aizvērt";
+            miAizvērt.Click += miAizvērt_Click;
             // 
             // form1ToolStripMenuItem
             // 
@@ -1344,6 +1418,32 @@ namespace KlonsF
             miCloseMDIForm.Text = "AIZVĒRT";
             miCloseMDIForm.Click += miCloseMDIForm_Click;
             // 
+            // miInfo
+            // 
+            miInfo.DropDownItems.AddRange(new ToolStripItem[] { miFApraksts, toolStripSeparator22, miParProgrammu });
+            miInfo.Name = "miInfo";
+            miInfo.Size = new Size(45, 23);
+            miInfo.Text = "&Info";
+            // 
+            // miFApraksts
+            // 
+            miFApraksts.Name = "miFApraksts";
+            miFApraksts.Size = new Size(175, 24);
+            miFApraksts.Text = "Apraksts";
+            miFApraksts.Click += miFApraksts_Click;
+            // 
+            // toolStripSeparator22
+            // 
+            toolStripSeparator22.Name = "toolStripSeparator22";
+            toolStripSeparator22.Size = new Size(172, 6);
+            // 
+            // miParProgrammu
+            // 
+            miParProgrammu.Name = "miParProgrammu";
+            miParProgrammu.Size = new Size(175, 24);
+            miParProgrammu.Text = "Par programmu";
+            miParProgrammu.Click += miParProgrammu_Click;
+            // 
             // aDownloader1
             // 
             aDownloader1.URL = "";
@@ -1367,105 +1467,6 @@ namespace KlonsF
             myStyleDefs.MarkedCellBack = Color.FromArgb(204, 104, 89);
             myStyleDefs.MarkedCellFore = Color.White;
             // 
-            // miShowWindowList
-            // 
-            miShowWindowList.Name = "miShowWindowList";
-            miShowWindowList.Size = new Size(304, 24);
-            miShowWindowList.Text = "Rādīt atvērto logu sarakstu";
-            miShowWindowList.Click += miShowWindowList_Click;
-            // 
-            // miAtvērtProgrammasMapi
-            // 
-            miAtvērtProgrammasMapi.Name = "miAtvērtProgrammasMapi";
-            miAtvērtProgrammasMapi.Size = new Size(304, 24);
-            miAtvērtProgrammasMapi.Text = "Atvērt programmas mapi";
-            miAtvērtProgrammasMapi.Click += miAtvērtProgrammasMapi_Click;
-            // 
-            // miAtvērtRezervesKopijuMapi
-            // 
-            miAtvērtRezervesKopijuMapi.Name = "miAtvērtRezervesKopijuMapi";
-            miAtvērtRezervesKopijuMapi.Size = new Size(304, 24);
-            miAtvērtRezervesKopijuMapi.Text = "Atvērt rezerves kopiju mapi";
-            miAtvērtRezervesKopijuMapi.Click += miAtvērtRezervesKopijuMapi_Click;
-            // 
-            // miReloadDB
-            // 
-            miReloadDB.DropDownItems.AddRange(new ToolStripItem[] { miReloadDataF, miReloadDataA, miReloadDataP, miReloadDataM });
-            miReloadDB.Name = "miReloadDB";
-            miReloadDB.Size = new Size(304, 24);
-            miReloadDB.Text = "Atkārtoti ielādēt datus no datu bāzes";
-            // 
-            // miReloadDataF
-            // 
-            miReloadDataF.Name = "miReloadDataF";
-            miReloadDataF.Size = new Size(157, 24);
-            miReloadDataF.Text = "Finanses";
-            miReloadDataF.Click += miReloadDataF_Click;
-            // 
-            // miReloadDataA
-            // 
-            miReloadDataA.Name = "miReloadDataA";
-            miReloadDataA.Size = new Size(157, 24);
-            miReloadDataA.Text = "Algas";
-            miReloadDataA.Click += miReloadDataA_Click;
-            // 
-            // miReloadDataM
-            // 
-            miReloadDataM.Name = "miReloadDataM";
-            miReloadDataM.Size = new Size(157, 24);
-            miReloadDataM.Text = "Noliktava";
-            miReloadDataM.Click += miReloadDataM_Click;
-            // 
-            // miReloadDataP
-            // 
-            miReloadDataP.Name = "miReloadDataP";
-            miReloadDataP.Size = new Size(157, 24);
-            miReloadDataP.Text = "Pamatlīdzekļi";
-            miReloadDataP.Click += miReloadDataP_Click;
-            // 
-            // miAizvērt
-            // 
-            miAizvērt.Name = "miAizvērt";
-            miAizvērt.Size = new Size(304, 24);
-            miAizvērt.Text = "Aizvērt";
-            miAizvērt.Click += miAizvērt_Click;
-            // 
-            // toolStripSeparator21
-            // 
-            toolStripSeparator21.Name = "toolStripSeparator21";
-            toolStripSeparator21.Size = new Size(301, 6);
-            // 
-            // miInfo
-            // 
-            miInfo.DropDownItems.AddRange(new ToolStripItem[] { miFApraksts, toolStripSeparator22, miParProgrammu });
-            miInfo.Name = "miInfo";
-            miInfo.Size = new Size(45, 23);
-            miInfo.Text = "&Info";
-            // 
-            // miFApraksts
-            // 
-            miFApraksts.Name = "miFApraksts";
-            miFApraksts.Size = new Size(180, 24);
-            miFApraksts.Text = "Apraksts";
-            miFApraksts.Click += miFApraksts_Click;
-            // 
-            // miParProgrammu
-            // 
-            miParProgrammu.Name = "miParProgrammu";
-            miParProgrammu.Size = new Size(180, 24);
-            miParProgrammu.Text = "Par programmu";
-            miParProgrammu.Click += miParProgrammu_Click;
-            // 
-            // toolStripSeparator22
-            // 
-            toolStripSeparator22.Name = "toolStripSeparator22";
-            toolStripSeparator22.Size = new Size(177, 6);
-            // 
-            // toolStripSeparator23
-            // 
-            toolStripSeparator23.Name = "toolStripSeparator23";
-            toolStripSeparator23.Size = new Size(301, 6);
-            // 
             // Form_Main
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
@@ -1474,6 +1475,7 @@ namespace KlonsF
             Controls.Add(tsWindowList);
             Controls.Add(menuStrip1);
             DesignTimeFontSize = 10F;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2);

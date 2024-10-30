@@ -248,7 +248,7 @@ namespace KlonsF.Classes
         public static List<F_ROPS1A> ROPS1A_GetBy_kieo_1(int PDID)
         {
             var ret = MyData.DbContextFRep.F_ROPS1A
-                .FromSql($"SELECT * FROM SP_F_LINKEDDOCS_2({PDID})")
+                .FromSql($"SELECT * FROM SP_F_REP_KIEO_1({PDID})")
                 .AsNoTracking()
                 .ToList();
             return ret;
