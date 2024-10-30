@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>KlonsF</RootNamespace>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationDefaultFont>Microsoft Sans Serif, 10pt</ApplicationDefaultFont>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="DB\**" />
+    <Compile Remove="FBembed4x64\**" />
+    <Compile Remove="FBembed4\**" />
+    <EmbeddedResource Remove="DB\**" />
+    <EmbeddedResource Remove="FBembed4x64\**" />
+    <EmbeddedResource Remove="FBembed4\**" />
+    <None Remove="DB\**" />
+    <None Remove="FBembed4x64\**" />
+    <None Remove="FBembed4\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="SQL\SQLV301.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\SQLV301.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="10.3.1" />
+    <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="11.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.11.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.11.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.11.0" />
+    <PackageReference Include="NPOI" Version="2.7.1" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj" />
+    <ProjectReference Include="..\DataSets\DataSets.csproj" />
+    <ProjectReference Include="..\KlonsLIB\KlonsLIB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FormsP\" />
+    <Folder Include="FormsA\" />
+    <Folder Include="Pics\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SourceGrid">
+      <HintPath>..\Libs\SourceGrid.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

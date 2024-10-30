@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MasterList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TemplateList>
+    <ConnectionStringTemplate Name="FBServer" Template="character set=UTF8;data source=localhost;ReturnRecordsAffected=True;port number=3051;ClientLibrary=fbclient.dll;initial catalog={0};user id={1};password={2};role=USERS" />
+    <ConnectionStringTemplate Name="FBServerAdmin" Template="character set=UTF8;data source=localhost;ReturnRecordsAffected=True;port number=3051;ClientLibrary=fbclient.dll;initial catalog={0};user id=ADMINS;password=parole;role=RDB$ADMIN" />
+    <ConnectionStringTemplate Name="FBEmbeded" Template="character set=UTF8;ReturnRecordsAffected=True;Server Type=1;ClientLibrary=fbclient.dll;Initial Catalog={0};user id=ADMINS;password=parole;role=RDB$ADMIN" />
+    <ConnectionStringTemplate Name="FBServer25" Template="character set=UTF8;data source=localhost;ReturnRecordsAffected=True;initial catalog={0};user id=AIVARS;password=parole" />
+    <ConnectionStringTemplate Name="FBEmbeded25" Template="character set=UTF8;ReturnRecordsAffected=True;Server Type=1;user id=aivars;password=parole;Initial Catalog={0};ClientLibrary=fbembed.dll" />
+  </TemplateList>
+  <ConnectionList>
+    <MasterEntry Name="tukšā datu bāze">
+      <FileName>Klons_00.fdb</FileName>
+      <Descr>tukšā datu bāze</Descr>
+      <ConnStr>FBServerAdmin</ConnStr>
+      <Path>@\base</Path>
+    </MasterEntry>
+    <MasterEntry Name="SIA PIA">
+      <FileName>klons_p.fdb</FileName>
+      <Descr>SIA PIA - 2014</Descr>
+      <ConnStr>FBServerAdmin</ConnStr>
+      <Path />
+    </MasterEntry>
+  </ConnectionList>
+</MasterList>

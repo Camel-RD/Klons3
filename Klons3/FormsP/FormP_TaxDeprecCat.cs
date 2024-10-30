@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using KlonsP.Classes;
+using KlonsF.Classes;
+using KlonsLIB.Forms;
+using KlonsLIB.Data;
+using KlonsLIB.Misc;
+using Klons3.ModelsP;
+using Equin.ApplicationFramework;
+
+namespace KlonsP.Forms
+{
+    public partial class FormP_TaxDeprecCat : MyFormBaseF
+    {
+        public FormP_TaxDeprecCat()
+        {
+            InitializeComponent();
+            CheckMyFontAndColors();
+            dgvRows.AutoGenerateColumns = false;
+            bsCatT.SetFilter<P_CATT>(x => x.ID != 0);
+        }
+
+        private void Form_TaxDeprecCat_Load(object sender, EventArgs e)
+        {
+            InsertInToolStrip(toolStrip1, cbCat, 1);
+
+            IsLoading = false;
+            SetCurrentCat();
+        }
+
+        public void SetCatT(int id, bool empty = false)
+        {
+            if (empty)
+            {
+                dgvRows.DataSource = null;
+                return;
+            }
+            if(dgvRows.DataSource == null)
+                dgvRows.DataSource = bsRows;
+            bsRows.Filter = "CATT=" + id;
+        }
+
+        public void SetCurrentCat()
+        {
+            if(bsCatT.Count == 0 || bsCatT.Current == null)
+            {
+                SetCatT(0, true);
+                return;
+            }
+            var dr = bsCatT.GetCurrentItem<P_CATT>();
+            SetCatT(dr.ID.Value);
+        }
+
+        private bool IgnoreCurrentChanged = false;
+        private void bsCatT_CurrentChanged(object sender, EventArgs e)
+        {
+            if (IsLoading || IgnoreCurrentChanged) return;
+            SetCurrentCat();
+        }
+
+        private void MakeReport()
+        {
+            var dr = bsCatT.GetCurrentItem<P_CATT>();
+
+            ReportViewerData rd = new ReportViewerData();
+            rd.FileName = "ReportP_NodNolKat_1";
+            rd.Sources["dsRows"] = bsRows;
+            rd.AddReportParameters(
+                new string[]
+                {
+                    "PCompany", MyData.Params.CompNameX,
+                    "PCatStr", $"[{dr.CODE}] {dr.DESCR}",
+                    "PCatRate", $"{dr.RATE}%"
+                });
+            MyMainForm.ShowReport(rd);
+
+        }
+
+        private void tsbReport_Click(object sender, EventArgs e)
+        {
+            if (bsRows.Count == 0 || bsCatT.Current == null)
+            {
+                MyMainForm.ShowInfo("Pārskatam nav datu.");
+                return;
+            }
+            MyData.ReportHelperF.CheckForErrors(() =>
+            {
+                MakeReport();
+            });
+
+        }
+    }
+
+}

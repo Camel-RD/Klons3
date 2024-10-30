@@ -1,0 +1,33 @@
+datagridview autosave
+bs AutoSaveOnDelete
+salary sheets r - IDSX
+time sheet list r - IDPL TimeSheet IDP
+timesheet PERID, AMID
+
+dgv default cell values for requires cells -> to support auto validate
+custom validation via EntityBase
+
+check before delete in mydbcontext or force SaveContext
+
+SalaryInfo WriteToRow
+
+SP_A_MAKE_SALARY_SHEET_R_HIST - timestamp parameter
+
+replace BindingList.Remove with DbContext.Remove
+
+Merge State = Unchanged will revert changes
+
+ClearDbSet for DocsM
+
+Delet1
+1. remove from collection
+2. remive from CTX
+
+Test BindingListView with DataMember
+
+
+Algas ieturējumi
+
+Remove unnecessary navigation propertyies
+
+ 

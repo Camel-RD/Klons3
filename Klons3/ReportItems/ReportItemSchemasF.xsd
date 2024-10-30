@@ -1,0 +1,2630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" id="ReportItemSchemasF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="F_ROPS1A" nillable="true" type="F_ROPS1A" />
+  <xs:complexType name="F_ROPS1A">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DETE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NRX" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCST" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REGNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REGNR2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="B0" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SAC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SAC2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SUMMC" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CUR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SUMM" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PVN" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SCR" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC4" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC5" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="QV" nillable="true" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZNR" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EntityBase" />
+  <xs:element name="F_ROPS2A" nillable="true" type="F_ROPS2A" />
+  <xs:complexType name="F_ROPS2A">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="B0" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SCR" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TCR" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REGNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RNAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADB" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ACR" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BDB" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BCR" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_ROPS2B" nillable="true" type="F_ROPS2B" />
+  <xs:complexType name="F_ROPS2B">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="B0" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SCR" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TCR" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_ROPS3A" nillable="true" type="F_ROPS3A" />
+  <xs:complexType name="F_ROPS3A">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RAC" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SDB" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SCR" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPA1" nillable="true" type="F_TREPA1" />
+  <xs:complexType name="F_TREPA1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="I1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NM" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ST" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S4" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPAPAN" nillable="true" type="F_TREPAPAN" />
+  <xs:complexType name="F_TREPAPAN">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC4" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC5" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CL" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S4" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPDARZ1" nillable="true" type="F_TREPDARZ1" />
+  <xs:complexType name="F_TREPDARZ1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DETE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NRX" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCST" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCSTR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REGNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AA" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A4" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A5" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A6" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A7" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A8" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A9" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A10" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A11" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A13" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A14" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A15" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A16" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A17" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A18" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPDARZ2" nillable="true" type="F_TREPDARZ2" />
+  <xs:complexType name="F_TREPDARZ2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RID0" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A4" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A5" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A6" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A7" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A8" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A9" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A10" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A11" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A13" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A14" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A15" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A16" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A17" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A18" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A19" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A20" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A21" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPDOCS1" nillable="true" type="F_TREPDOCS1" />
+  <xs:complexType name="F_TREPDOCS1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPDOCS2" nillable="true" type="F_TREPDOCS2" />
+  <xs:complexType name="F_TREPDOCS2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NR1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NR2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="VX" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPDOCSS" nillable="true" type="F_TREPDOCSS" />
+  <xs:complexType name="F_TREPDOCSS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S3" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPMT" nillable="true" type="F_TREPMT" />
+  <xs:complexType name="F_TREPMT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AD" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACN1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACN2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M4" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M5" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M6" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M7" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M8" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M9" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M10" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M11" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="M12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N2" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N3" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N4" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N5" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N6" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N7" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N8" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N9" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N10" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N11" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="N12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NT" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPOPS" nillable="true" type="F_TREPOPS" />
+  <xs:complexType name="F_TREPOPS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DOCID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC11" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC12" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC13" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC14" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC15" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC21" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC22" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC23" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC24" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AC25" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SUMMC" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CUR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SUMM" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="QV" nillable="true" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NL" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZDT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="F_TREPOPSRow" type="F_TREPOPSD" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="F_TREPOPSD">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DETE" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NRX" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCST" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SUMM" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PVN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OPT" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZNR" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ZU" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZDT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NL" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPOPSD" nillable="true" type="F_TREPOPSD" />
+  <xs:element name="F_TREPPVNZ1" nillable="true" type="F_TREPPVNZ1" />
+  <xs:complexType name="F_TREPPVNZ1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DETE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NRX" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCTYP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCST" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCSTR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CLID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REGNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AA" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A8" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A9" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A10" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="A11" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A12" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A13" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A14" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A15" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A16" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A17" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A18" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A19" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A20" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A21" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A22" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A23" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A24" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A25" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A26" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A27" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A28" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A29" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A30" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="A31" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="F_TREPUDOCS" nillable="true" type="F_TREPUDOCS" />
+  <xs:complexType name="F_TREPUDOCS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SPID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LD" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="T0" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="T1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="T2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="T3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DT1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CT" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="N1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="N2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" nillable="true" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventInfo0" nillable="true" type="EventInfo0" />
+  <xs:complexType name="EventInfo0">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="LastInDay" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="State" type="EState" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdIt" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Event" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ItemDate1" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ItemDate2" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="XEvent" type="EEvent" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Dt" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DtReg" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Docnr" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Cat1" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CatD" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CatT" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Place" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Department" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Deprec0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueC" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecC" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Deprec1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueLeft0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueLeft1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueNew" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecNew" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueAdd" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecAdd" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueRevalue" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecRevalue" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueRecat" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecRecat" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValueExclude" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecExclude" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SellValue" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DeprecCalcThisMt" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateD" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateDMt" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ChangeRateDMt" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MtTotal" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MtUsed" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxVal" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValLeft0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValLeft1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValC" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxRate" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxDeprec" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxDeprecCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValNewCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValAddCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValRecatCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValExcludeCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValLeftAtEnd" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxValLeftAtEndCalc" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TaxEach" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ZDt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ZU" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="Liquidated" />
+      <xs:enumeration value="NotUsed" />
+      <xs:enumeration value="OldDate" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EEvent">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="error" />
+      <xs:enumeration value="nenoteikts" />
+      <xs:enumeration value="pienuzsk" />
+      <xs:enumeration value="iegeks" />
+      <xs:enumeration value="ieg" />
+      <xs:enumeration value="izv" />
+      <xs:enumeration value="eks" />
+      <xs:enumeration value="vieta" />
+      <xs:enumeration value="parvert" />
+      <xs:enumeration value="rekat" />
+      <xs:enumeration value="kapit" />
+      <xs:enumeration value="nelieto" />
+      <xs:enumeration value="lieto" />
+      <xs:enumeration value="likvid" />
+      <xs:enumeration value="noliet" />
+      <xs:enumeration value="apr" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ItemInfo" nillable="true" type="ItemInfo" />
+  <xs:complexType name="ItemInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EventInfo0">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="DateStart" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateEnd" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InUse" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FirstYear" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FirstMonth" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ItemRegNr" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ItemName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateReg" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DateLiq" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="StartingValue" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EndingValue" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEventInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EventInfo" nillable="true" type="EventInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EventInfo0">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="DR" type="P_ITEMS_EVENTS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="InitFields" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_ITEMS_EVENTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDIT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EVENT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DTREG" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CAT1" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CATD" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CATT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLACE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPARTMENT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPREC_0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_LEFT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_C" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPREC_C" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SELL_VALUE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_D" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_D_MT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT_TOTAL" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT_USED" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TAX_VAL" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TAX_VAL_LEFT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TAX_VAL_C" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TAX_RATE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TAX_EACH" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CHCOLSET" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZDT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ZU" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CAT1Row" type="P_CAT1" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CATDRow" type="P_CATD" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CATTRow" type="P_CATT" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEPARTMENTRow" type="P_DEPARTMENTS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EVENTRow" type="P_EVENTS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ITEMRow" type="P_ITEMS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PLACERow" type="P_PLACES" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XEvent" type="EEvent" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XChColSet" type="EChColInd" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_CAT1">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDCD" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDCT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GROUP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CATDRow" type="P_CATD" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CATTRow" type="P_CATT" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_CATD">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_CATT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_DEPARTMENTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GROUP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_EVENTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="K1" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XEvent" type="EEvent" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_ITEMS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="REG_NR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CAT1" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CATD" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CATT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLACE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPARTMENT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPREC" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_LEFT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OPT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="STATE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ZDT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ZU" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Cat1Row" type="P_CAT1" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CatDRow" type="P_CATD" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CatTRow" type="P_CATT" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DepartmentRow" type="P_DEPARTMENTS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlaceRow" type="P_PLACES" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDATE1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDATE2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TCAT1" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TCATD" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TCATT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TPLACE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDEPARTMENT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TVALUE0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TDEPREC0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TVALUE_LEFT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TSTATE" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TERROR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XState" type="EState" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XTState" type="EState" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="P_PLACES">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ADDR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GROUP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfP_ITEMS_EVENTS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_ITEMS_EVENTS" nillable="true" type="P_ITEMS_EVENTS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EChColInd">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" />
+      <xs:enumeration value="cat1" />
+      <xs:enumeration value="catd" />
+      <xs:enumeration value="catt" />
+      <xs:enumeration value="place" />
+      <xs:enumeration value="department" />
+      <xs:enumeration value="value0" />
+      <xs:enumeration value="deprec0" />
+      <xs:enumeration value="valuec" />
+      <xs:enumeration value="deprecc" />
+      <xs:enumeration value="sellvalue" />
+      <xs:enumeration value="taxvalue" />
+      <xs:enumeration value="taxvaluec" />
+      <xs:enumeration value="taxvalueleft" />
+      <xs:enumeration value="mttotal" />
+      <xs:enumeration value="mtused" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ItemRepInfo" nillable="true" type="ItemRepInfo" />
+  <xs:complexType name="ItemRepInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ItemInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="SCat1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCatD" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCatT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SDepartment" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SPlace" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventRepInfo" nillable="true" type="EventRepInfo" />
+  <xs:complexType name="EventRepInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EventInfo">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="CountAtEnd" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RegNr" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCat1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCatD" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCatT" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SDepartment" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SPlace" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RCat1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RCat2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RCat3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RCat4" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RCat5" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsTotal" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfInt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="int" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_TAXDEPRECYEAR" nillable="true" type="P_TAXDEPRECYEAR" />
+  <xs:complexType name="P_TAXDEPRECYEAR">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CATT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUEC" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DEPREC" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="COUNT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_NEW" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_ADD" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_REM" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_EXCL" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUE_COR" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VALUED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CATTRow" type="P_CATT" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RepRow_BalMT" nillable="true" type="RepRow_BalMT" />
+  <xs:complexType name="RepRow_BalMT">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NR" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DC" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TP" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M2" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M3" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M4" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M5" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M6" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M7" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M8" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M9" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M10" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M11" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M12" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="M13" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SickDayCalcRow" nillable="true" type="SickDayCalcRow" />
+  <xs:complexType name="SickDayCalcRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotal" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTitle" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateStart" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateEnd" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysCount" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysCount0" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysCount75" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysCount80" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HoursCount" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HoursCount75" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HoursCount80" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AvPayRate" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickDayPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickDayPay75" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickDayPay80" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AvPayCalcRow" nillable="true" type="AvPayCalcRow" />
+  <xs:complexType name="AvPayCalcRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Year" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Salary" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Salary2" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Pay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CalendarDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MonthWorkDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MonthWorkHours" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysPlan" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkDaysPlan" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DaysFact" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HoursPlan" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkHoursPlan" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HoursFact" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkPayCalcRow1" nillable="true" type="WorkPayCalcRow1" />
+  <xs:complexType name="WorkPayCalcRow1">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotal" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTitle" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateDef" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RateType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Rate" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Days" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Hours" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Salary" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VacationCalcRow" nillable="true" type="VacationCalcRow" />
+  <xs:complexType name="VacationCalcRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotal" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Position" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateStart" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateEnd" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Days" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Hours" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AvPayRate" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Pay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DNS" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BeforeIINEX" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IINEX" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Cash" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalcRRow" nillable="true" type="CalcRRow" />
+  <xs:complexType name="CalcRRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTitle" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotals" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Date1" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Date2" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Days" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateForMonth" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateForDays" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateMax" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateDivided" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Rate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BonusCalcRow" nillable="true" type="BonusCalcRow" />
+  <xs:complexType name="BonusCalcRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotal" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AddTo" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BonusType" type="EBonusType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CalcFrom" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RateType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CalcBase" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Pay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Cash" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CashNotPaid" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="InAvPay" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsPaid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EBonusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Taxed" />
+      <xs:enumeration value="NoSAI" />
+      <xs:enumeration value="AuthorsFees" />
+      <xs:enumeration value="NotTaxed" />
+      <xs:enumeration value="MinusBeforeIIN" />
+      <xs:enumeration value="MinusAfterIIN" />
+      <xs:enumeration value="ReverseCalc" />
+      <xs:enumeration value="PfNotTaxed" />
+      <xs:enumeration value="PfTaxed" />
+      <xs:enumeration value="LiNotTaxed" />
+      <xs:enumeration value="LiTaxed" />
+      <xs:enumeration value="HiNotTaxed" />
+      <xs:enumeration value="HiTaxed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SalaryCalcRow" nillable="true" type="SalaryCalcRow" />
+  <xs:complexType name="SalaryCalcRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTitle" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsTotals" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value2" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value3" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value4" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeReportRow1" nillable="true" type="TimeReportRow1" />
+  <xs:complexType name="TimeReportRow1">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="RowType" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TopBorderVisible" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BottomBorderVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D1" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D2" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D3" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D4" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D5" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D6" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D7" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D8" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D9" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D10" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D11" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D12" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D13" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D14" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D15" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D16" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D17" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D18" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D19" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D20" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D21" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D22" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D23" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D24" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D25" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D26" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D27" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D28" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D29" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D30" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="D31" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="K1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeReportRow2a" nillable="true" type="TimeReportRow2a" />
+  <xs:complexType name="TimeReportRow2a">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Row" type="TimeReportRow2" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickdaysA" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickdaysB" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickdaysN" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TimeReportRow2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_CALENDAR_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_CALENDAR_DAYS_USE" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_MONTH_WORKDAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_MONTH_WORKHOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_WORK_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_WORK_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_WORK_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_WORK_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_WORK_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_WORK_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_WORK_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_WORK_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOLIDAYS_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOLIDAYS_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOLIDAYS_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PLAN_HOLIDAYS_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOLIDAYS_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOLIDAYS_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOLIDAYS_HOURS_NIGHT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_HOLIDAYS_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_SICKDAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_ACCIDENT_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_AVERAGE_INCOME_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_FREE_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_FREE_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_WORK_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_WORKINHOLIDAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_HOURS_OVERTIME" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_HOLIDAYS_HOURS" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_FACT_AVPAY_HOLIDAYS_HOURS_OVERT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_BUSINESS_TRIP_DAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_PAID_HOLIDAYS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_VACATION_DAYS_CURRENT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_VACATION_DAYS_NEXT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_VACATION_HOURS_CURRENT" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_VACATION_HOURS_NEXT" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IINReportRow" nillable="true" type="IINReportRow" />
+  <xs:complexType name="IINReportRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Use" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nr" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="idp" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PK" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Date1" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Date2" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MonthS" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IncomeType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IncomeTypeS" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="income" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="income_nottaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="authors_fee" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="dnsn_amount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="untaxed_minimum0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_dependants0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_x0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="untaxed_minimum" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_dependants" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_x" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_xtp" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_invalidity" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_retaliation" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_national_movement" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_exempt_expenses" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="plus_pf_nottaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="plus_li_nottaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="plus_hi_nottaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="before_iin" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="iin_amount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPerson" nillable="true" type="RepRowPerson" />
+  <xs:complexType name="RepRowPerson">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EDIT_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FNAME" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LNAME" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="GENDER" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PERSON_CODE" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BIRTH_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ADDRESS" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CITY" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="STATE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="POSTAL_CODE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TERRITORIAL_CODE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PHONE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EMAIL" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="COMMENTS" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BANK_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BANK_SID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BANK_NAME" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BANK_ACC" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PASSPORT_NO" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PASSPORT_ISSUER" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PASSPORT_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_SERIAL" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_NO" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_ISSUER" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TAXREG_NO" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="INVALID" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PENSIONER" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PRISONER" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="REPRES" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PRET" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="APGAD_SK" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PRISONER_SP" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NOT_OSA" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExUntaxedMinimum" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExDependants" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExRetaliation" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExInvalidity" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExNationalMovements" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateDNSN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateDDSN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateIIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RateIIN2" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UseProgresiveIINRate" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IIN0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DAYS" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPosition" nillable="true" type="RepRowPosition" />
+  <xs:complexType name="RepRowPosition">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Nr" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HasHist" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IDR" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IDDEP" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TITLE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TITLE_DATIVE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TITLE_ACCUSATIVE" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SALARY_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SIXDAYWEEK" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NORMAL_DAY_HOURS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NORMAL_WEEK_HOURS" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_NIGHT" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_NIGHT_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_OVERTIME" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_OVERTIME_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_NIGHT" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_NIGHT_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_OVERTIME" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_OVERTIME_TYPE" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ADVAMCE" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OCCUPATION_CODE" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OCCUPATION_CODE_S" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EDIT_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IIN0" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfRepRowPositionChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepRowPositionChange" nillable="true" type="RepRowPositionChange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RepRowPositionChange">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="R1" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="R2" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowEvent" nillable="true" type="RepRowEvent" />
+  <xs:complexType name="RepRowEvent">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PersonRow" type="A_PERSONS" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PositionRow" type="A_POSITIONS" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IDN" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IDN2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PosTitle" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EventName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Event2Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DATE1" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DATE2" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DATE3" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SCODE" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PERSONS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME_DATIVE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME_ACCUSATIVE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="GENDER" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BIRTH_DATE" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PK" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ADDRESS" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CITY" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="STATE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="COUNTRY" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="POSTAL_CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TERRITORIAL_CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PASSPORT_NO" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PASSPORT_ISSUER" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PASSPORT_DATE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PHONE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EMAIL" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BANK_ID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BANK_ACC" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="COMMENTS" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DAYS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BANK" type="A_BANKS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_EVENTS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_EVENTS" nillable="true" type="A_EVENTS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_EVENTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDA" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDN" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDN2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE1" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE3" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DOCNR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCODE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DAYS" type="xs:float" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OCCUPATION_CODE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DAYS2" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EvenType2" type="A_EVENT_TYPES2" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EventType" type="A_EVENT_TYPES" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EventCode" type="EEventId" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_POSITIONS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IDDEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TITLE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="APPLY_IIN_EXEMPTIONS" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT2" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PAYLISTS_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PAYLISTS_R" nillable="true" type="A_PAYLISTS_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PAYLISTS_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WITHHOLDINGS0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TPAY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WITHHOLDINGS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TPAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="R1" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="R2" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="S2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ID_SHR_1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ID_SHR_2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_TAXED_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOSAI_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOTTAXED_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UNTAXED_MINIMUM_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_DEPENDANTS_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_TP_1" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DNSI_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PFNT_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LINT_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HINT_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_EXP_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_1" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_TAXED_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOSAI_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOTTAXED_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UNTAXED_MINIMUM_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_DEPENDANTS_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_TP_2" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DNSI_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PFNT_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LINT_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HINT_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_EXP_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PayList" type="A_PAYLISTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PAYLISTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DOPAY" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TOTAL_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_DEPARTMENTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="ID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC4" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC5" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ACC6" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED_DT2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PAYLIST_TEMPL_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PAYLIST_TEMPL_R" nillable="true" type="A_PAYLIST_TEMPL_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PAYLIST_TEMPL_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PaylistTemplate" type="A_PAYLIST_TEMPL" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PAYLIST_TEMPL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PIECEWORK">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PIECEWORK" nillable="true" type="A_PIECEWORK" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PIECEWORK">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDK" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDA" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UNIT" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="QUANTITY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BONUS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUNIT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUSE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUSEINHOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Catalog" type="A_PIECEWORK_CATALOG" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PIECEWORK_CATALOG">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UNIT" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUNIT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUSE" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TIMEUSEINHOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CatalogSection" type="A_PIECEWORK_CATSTRUCT" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PIECEWORK_CATSTRUCT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PIECEWORK_CATALOG">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PIECEWORK_CATALOG" nillable="true" type="A_PIECEWORK_CATALOG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_POSITIONS_PLUSMINUS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_POSITIONS_PLUSMINUS" nillable="true" type="A_POSITIONS_PLUSMINUS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_POSITIONS_PLUSMINUS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDA" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DATE2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDSV" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDNO" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDIE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_INAVPAY" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_PAID" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlusMinusFromRow" type="A_PLUSMINUS_FROM" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlusMinusType" type="A_PLUSMINUS_TYPES" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XBonusFrom" type="EBonusFrom" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XBonusType" type="EBonusType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PLUSMINUS_FROM">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SN" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_SALARY_PLUSMINUS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_SALARY_PLUSMINUS" nillable="true" type="A_SALARY_PLUSMINUS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_SALARY_PLUSMINUS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDA" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDSX" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDSV" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDNO" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDIE" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_INAVPAY" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_PAID" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PositionsPlusMinusRow" type="A_POSITIONS_PLUSMINUS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlusMinusFrom" type="A_PLUSMINUS_FROM" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PlusMinusType" type="A_PLUSMINUS_TYPES" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalarySheetRow" type="A_SALARY_SHEETS_R" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XRateType" type="EBonusRateType" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XBonusFrom" type="EBonusFrom" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XBonusType" type="EBonusType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_PLUSMINUS_TYPES">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR2" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SN" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_SALARY_SHEETS_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDSX" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDST" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_TEMP" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TYPE_TAG" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="POSITION_TITLE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TERRITORIAL_CODE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CALENDAR_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CALENDAR_DAYS_USE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MONTH_WORKDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MONTH_WORKHOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_WORK_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_WORK_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_WORK_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_WORK_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_WORK_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_WORK_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_WORK_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_WORK_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOLIDAYS_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOLIDAYS_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOLIDAYS_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_HOLIDAYS_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOLIDAYS_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOLIDAYS_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOLIDAYS_HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_HOLIDAYS_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_DAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_NIGHT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_HOLIDAYS_DAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_HOLIDAYS_NIGHT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_HOLIDAYS_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_PAID_HOLIDAYS_DAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_PAID_HOLIDAYS_NIGHT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_PIECEWORK" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SICKDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SICKDAYS_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ACCIDENT_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ACCIDENT_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AVERAGE_INCOME_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AVERAGE_INCOME_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_FREE_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_FREE_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_WORK_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_WORKINHOLIDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_HOURS_OVERTIME" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_HOLIDAYS_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FACT_AVPAY_HOLIDAYS_HOURS_OVERT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_AVPAY_FREE_DAYS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_AVPAY_WORK_DAYS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_AVPAY_WORK_DAYS_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_AVPAY_HOLIDAYS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_AVPAY_HOLIDAYS_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BUSINESS_TRIP_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BUSINESS_TRIP_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAID_HOLIDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAID_HOLIDAYS_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DAYS_CURRENT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DAYS_NEXT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_HOURS_CURRENT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_HOURS_NEXT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_PAY_CURRENT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_PAY_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DNS_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DDS_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_IIN_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_IIN_REDUCE_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_CASH_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_PAY_PREV" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DNS_PREV" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DDS_PREV" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_IIN_PREV" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NOSAI" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_AUTHORS_FEES" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MINUS_BEFORE_IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MINUS_AFTER_IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_PF_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_PF_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_LI_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_LI_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_HI_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_HI_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NP_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NP_NOSAI" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NP_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TOTAL_BEFORE_TAXES" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADJUSTED_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMOUNT_BEFORE_SN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMOUNT_BEFORE_SN_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_DNSN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_DDSN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DNSN_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DDSN_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SN_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DNSN_AMOUNT_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DDSN_AMOUNT_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SN_MAX_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_UNTAXED_MINIMUM0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_DEPENDANTS0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_RETALIATION0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_INVALIDITY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_NATIONAL_MOVEMENT0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_UNTAXED_MINIMUM" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_DEPENDANTS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_RETALIATION" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_INVALIDITY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_NATIONAL_MOVEMENT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_EXPENSES" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_2TP" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_20" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_EXEMPT_2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMOUNT_BEFORE_IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMOUNT_BEFORE_IIN_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_IIN2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_AMOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_AMOUNT_REVERSE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="URVN_AMAOUNT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLUS_NOT_PAID" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_ADVANCE_CURRENT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_ADVANCE_NEXT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_ADVANCE_PREV" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY0" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAYT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_DATE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="COMMENTS" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WITHHOLD_FROM_PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FORAVPAYCALC_BRUTO" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FORAVPAYCALC_PAYOUT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FORAVPAYCALC_DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FORAVPAYCALC_HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AVPAYCALC_CALDAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AVPAYCALC_DAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AVPAYCALC_HOUR" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT_EDITED" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CALC_VER" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_DAYS_COMP" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="VACATION_PAY_COMP" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalarySheet" type="A_SALARY_SHEETS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalarySheetTotal" type="A_SALARY_SHEETS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="RowSetTotalRow" type="A_SALARY_SHEETS_R" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XType" type="ESalarySheetRowType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_SALARY_SHEETS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT1" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT2" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_TEMP" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XKind" type="ESalarySheetKind" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ISFIRSTMT" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_SALARY_SHEETS_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_SALARY_SHEETS_R" nillable="true" type="A_SALARY_SHEETS_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ESalarySheetKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Total" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ESalarySheetRowType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OnlyOne" />
+      <xs:enumeration value="OneOfMany" />
+      <xs:enumeration value="Total" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EBonusRateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Money" />
+      <xs:enumeration value="Percent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EBonusFrom">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="FromMonthSalary" />
+      <xs:enumeration value="FromPay" />
+      <xs:enumeration value="FromPayAndVacSick" />
+      <xs:enumeration value="FromPayBeforeSAI" />
+      <xs:enumeration value="FromPayAfterSAI" />
+      <xs:enumeration value="FromPayBeforeIIN" />
+      <xs:enumeration value="FromPayAfterIIN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfA_POSITIONS_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_POSITIONS_R" nillable="true" type="A_POSITIONS_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_POSITIONS_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDA" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IDDEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TITLE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TITLE_DATIVE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TITLE_ACCUSATIVE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SALARY_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SIXDAYWEEK" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NORMAL_DAY_HOURS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NORMAL_WEEK_HOURS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_NIGHT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_NIGHT_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_OVERTIME_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_NIGHT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_NIGHT_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_OVERTIME" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="RATE_HOLIDAY_OVERTIME_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="APPLY_IIN_EXEMPTIONS" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVAMCE" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OCCUPATION_CODE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EDIT_DATE" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XRateType" type="ESalaryType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ESalaryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Aggregated" />
+      <xs:enumeration value="Piece" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfA_SALARY_SHEET_TEMPL_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_SALARY_SHEET_TEMPL_R" nillable="true" type="A_SALARY_SHEET_TEMPL_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_SALARY_SHEET_TEMPL_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SalarySheetTemplate" type="A_SALARY_SHEET_TEMPL" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_SALARY_SHEET_TEMPL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_TIMESHEET_LISTS_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_TIMESHEET_LISTS_R" nillable="true" type="A_TIMESHEET_LISTS_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_TIMESHEET_LISTS_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDPL" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NIGHT" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OVERTIME" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Timesheet" type="A_TIMESHEET_LISTS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TimePlan" type="A_TIMEPLAN_LIST" />
+          <xs:element minOccurs="1" maxOccurs="1" name="XPlanType" type="EPlanType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_TIMESHEET">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_TIMESHEET" nillable="true" type="A_TIMESHEET" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_TIMESHEET">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="XKind1" type="EKind1" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDL" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PERID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AMID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND1" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND2" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V1" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V2" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V3" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V4" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V5" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V6" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V7" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V8" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V9" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V10" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V11" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V12" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V13" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V14" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V15" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V16" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V17" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V18" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V19" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V20" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V21" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V22" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V23" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V24" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V25" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V26" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V27" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V28" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V29" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V30" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="V31" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D1" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D2" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D3" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D4" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D5" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D6" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D7" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D8" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D9" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D10" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D11" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D12" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D13" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D14" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D15" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D16" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D17" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D18" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D19" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D20" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D21" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D22" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D23" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D24" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D25" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D26" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D27" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D28" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D29" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D30" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="D31" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="K1" nillable="true" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TimeSheetListRow" type="A_TIMESHEET_LISTS_R" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TimePlan" type="A_TIMEPLAN_LIST" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="EKind1">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PlanGroupDay" />
+      <xs:enumeration value="PlanGroupaNight" />
+      <xs:enumeration value="PlanIndividualDay" />
+      <xs:enumeration value="PlanIndividualNight" />
+      <xs:enumeration value="Fact" />
+      <xs:enumeration value="FactOvertime" />
+      <xs:enumeration value="FactNight" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="A_TIMEPLAN_LIST">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND1" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="KIND2" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NIGHT" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HOURS_NIGHT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_TIMESHEET_LISTS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDSH" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Department" type="A_DEPARTMENTS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ISFIRSTMT" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="EPlanType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fixed" />
+      <xs:enumeration value="Individual" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfA_TIMESHEET_TEMPL_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_TIMESHEET_TEMPL_R" nillable="true" type="A_TIMESHEET_TEMPL_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_TIMESHEET_TEMPL_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDS" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDAM" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDPL" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLAN_TYPE" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Position" type="A_POSITIONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TimePlan" type="A_TIMEPLAN_LIST" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TimeSheetTemplate" type="A_TIMESHEET_TEMPL" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_TIMESHEET_TEMPL">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEP" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="USED" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DEPNavigation" type="A_DEPARTMENTS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_EVENT_TYPES2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TAG" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_EVENT_TYPES">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DESCR" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="SN" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IS_DATE_INT" nillable="true" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TP2" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SCODE" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="EEventId">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Pieņemts" />
+      <xs:enumeration value="Atlaists" />
+      <xs:enumeration value="Piešķirts_amats" />
+      <xs:enumeration value="Atbrīvots_no_amata" />
+      <xs:enumeration value="Noslēgts_uzņēmuma_līgums" />
+      <xs:enumeration value="Izbeigts_uzņēmuma_līgums" />
+      <xs:enumeration value="Atvaļinājums" />
+      <xs:enumeration value="Bezalgas_atvaļinājums" />
+      <xs:enumeration value="Apmaksāts_mācību_atvaļinājums" />
+      <xs:enumeration value="Bezalgas_mācību_atvaļinājums" />
+      <xs:enumeration value="Grūtniecības_un_dzemdību_atvaļinājums" />
+      <xs:enumeration value="Bērna_kopšanas_atvaļinājums" />
+      <xs:enumeration value="Paternitātes_atvaļinājums" />
+      <xs:enumeration value="Slimības_lapa_A" />
+      <xs:enumeration value="Slimības_lapa_B" />
+      <xs:enumeration value="Negadījums_darba_vietā" />
+      <xs:enumeration value="Neattaisnots_kavējums" />
+      <xs:enumeration value="Komandējums" />
+      <xs:enumeration value="Vidējās_izpeļņas_dienas" />
+      <xs:enumeration value="Profesijas_maiņa" />
+      <xs:enumeration value="Cits" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfA_PASTDATA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PASTDATA" nillable="true" type="A_PASTDATA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PASTDATA">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="YR" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="MT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BRUTO" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CALDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DAYSMT" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HOURSMT" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLANDAYS" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PLANHOURS" type="xs:float" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BRUTO2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PASTDATA_2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PASTDATA_2" nillable="true" type="A_PASTDATA_2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PASTDATA_2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="DT" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_TAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOSAI" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOTTAXED" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UNTAXED_MINIMUM" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_DEPENDANTS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_TP" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PF_NT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LI_NT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HI_NT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_EXP" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WITHHOLDINGS" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAYT" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_TAXED_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOSAI_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_NOTTAXED_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UNTAXED_MINIMUM_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_DPENDANTS_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX2_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PF_NT_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LI_NT_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="HI_NT_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IINEX_EXP_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAY_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ADVANCE_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="WITHHOLDINGS_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PAYT_P" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IDPNavigation" type="A_PERSONS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_PERSONS_R">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_PERSONS_R" nillable="true" type="A_PERSONS_R" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_PERSONS_R">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="EDIT_DATE" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LNAME" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PERSON_CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TERRITORIAL_CODE" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_SERIAL" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_NO" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TAXDOC_ISSUER" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TAXREG_NO" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="INVALID" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PENSIONER" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PRISONER" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="REPRES" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PRET" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="APGAD_SK" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PENSIONER_SP" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="NOT_OSA" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_POSITIONS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_POSITIONS" nillable="true" type="A_POSITIONS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfA_UNTAXED_MIN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="A_UNTAXED_MIN" nillable="true" type="A_UNTAXED_MIN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="A_UNTAXED_MIN">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IDP" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="ONDATE" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="UNTAXED_MIN" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IIN_RATE_TYPE" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Person" type="A_PERSONS" />
+          <xs:element minOccurs="1" maxOccurs="1" name="FilterTag" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="A_BANKS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NAME" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="TS" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RepRowPersonStatusChange" nillable="true" type="RepRowPersonStatusChange" />
+  <xs:complexType name="RepRowPersonStatusChange">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPersonRatesChange" nillable="true" type="RepRowPersonRatesChange" />
+  <xs:complexType name="RepRowPersonRatesChange">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descr" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="R1" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="R2" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPositionChange" nillable="true" type="RepRowPositionChange" />
+  <xs:element name="SalaryRepRow2" nillable="true" type="SalaryRepRow2" />
+  <xs:complexType name="SalaryRepRow2">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SNR" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption2" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkHours" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FreeAvPayDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VacationDays" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VacationDaysComp" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickDays" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SickPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VacationPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="VacationPayComp" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FreeAvPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WorkAvPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PlusTaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PlusNotTaxed" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PlusAuthorsFees" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PlusNoSAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ForSAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DNSAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DDSAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UntaxedMinimum" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExDependants" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExInvalidity" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExRetaliation" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExNatMovement" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ExExpenses" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MinusBeforeIIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="MinusAfterIIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AdvanceOrDebt" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Pay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PayT" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Paid" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPayList" nillable="true" type="RepRowPayList" />
+  <xs:complexType name="RepRowPayList">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="key" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Nr" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Year" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Period" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="WriteDate" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PayDateS" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalPay" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalPayS" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfRepRowPayListRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepRowPayListRow" nillable="true" type="RepRowPayListRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RepRowPayListRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Nr" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PersonRow" type="A_PERSONS" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PositionRow" type="A_POSITIONS" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PK" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PositionTitle" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NameAndPos" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TPay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Pay" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Advance" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Withhold" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepRowPayListRow" nillable="true" type="RepRowPayListRow" />
+  <xs:element name="VSAOIReportRow1" nillable="true" type="VSAOIReportRow1" />
+  <xs:complexType name="VSAOIReportRow1">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Nr" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Tp" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Tp2" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PK" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Income" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SAI" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IncomeCorrected" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SAICorrected" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IIN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HasURVN" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="URVN" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Hours" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventsReportRow" nillable="true" type="EventsReportRow" />
+  <xs:complexType name="EventsReportRow">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Nr" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PK" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Date" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProfessionCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceMainData" nillable="true" type="InvoiceMainData" />
+  <xs:complexType name="InvoiceMainData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DocDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DocSr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DocNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DocNrX" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DocTitle" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ARegNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="APVNRegNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AAddress2" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ABankName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ABankCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ABankAccount" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BRegNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BPVNRegNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BAddress2" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BBankName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BBankCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BBankAccount" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CRegNr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CDriverName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CTLVNR" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TransactionDescr" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PaymentType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PaymentDue" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DocTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SummaVardiem" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Signer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SigningDate" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ShowDiscountColumn" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ShowPVNIdColumn" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ShowCarrier" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceRowData" nillable="true" type="InvoiceRowData" />
+  <xs:complexType name="InvoiceRowData">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Snr" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Unit" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Price0" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SPrice0" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Discount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SPrice" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="STPrice" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PVNTag" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceTotalsRowData" nillable="true" type="InvoiceTotalsRowData" />
+  <xs:complexType name="InvoiceTotalsRowData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Caption" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SAmount" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Tp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
