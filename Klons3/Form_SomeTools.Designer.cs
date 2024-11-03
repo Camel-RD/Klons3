@@ -40,7 +40,7 @@ namespace KlonsF
             miReportsProcess1 = new ToolStripMenuItem();
             miReportsProcess2 = new ToolStripMenuItem();
             miGenerateXSD = new ToolStripMenuItem();
-            eFReloadAllDocsToolStripMenuItem = new ToolStripMenuItem();
+            miTestXYZ = new ToolStripMenuItem();
             richTextBox1 = new RichTextBox();
             panel1 = new Panel();
             myBindingSourceEf1 = new KlonsLIB.Data.MyBindingSourceEf(components);
@@ -61,7 +61,7 @@ namespace KlonsF
             // 
             // tasksToolStripMenuItem
             // 
-            tasksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { miGetDbTableNames, miAddTsFields, miListUseeTable, miReportsProcess1, miReportsProcess2, miGenerateXSD, eFReloadAllDocsToolStripMenuItem });
+            tasksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { miGetDbTableNames, miAddTsFields, miListUseeTable, miReportsProcess1, miReportsProcess2, miGenerateXSD, miTestXYZ });
             tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
             tasksToolStripMenuItem.Size = new Size(52, 23);
             tasksToolStripMenuItem.Text = "Tasks";
@@ -110,10 +110,10 @@ namespace KlonsF
             // 
             // eFReloadAllDocsToolStripMenuItem
             // 
-            eFReloadAllDocsToolStripMenuItem.Name = "eFReloadAllDocsToolStripMenuItem";
-            eFReloadAllDocsToolStripMenuItem.Size = new Size(228, 24);
-            eFReloadAllDocsToolStripMenuItem.Text = "EF reload all docs";
-            eFReloadAllDocsToolStripMenuItem.Click += eFReloadAllDocsToolStripMenuItem_Click;
+            miTestXYZ.Name = "miTestXYZ";
+            miTestXYZ.Size = new Size(228, 24);
+            miTestXYZ.Text = "Test XYZ";
+            miTestXYZ.Click += miTestXYZ_Click;
             // 
             // richTextBox1
             // 
@@ -169,7 +169,7 @@ namespace KlonsF
         private ToolStripMenuItem miGenerateXSD;
         private Panel panel1;
         private ToolStripMenuItem miReportsProcess2;
-        private ToolStripMenuItem eFReloadAllDocsToolStripMenuItem;
+        private ToolStripMenuItem miTestXYZ;
         private KlonsLIB.Data.MyBindingSourceEf myBindingSourceEf1;
     }
 }

@@ -236,16 +236,16 @@ public class MyDbContext : DbContext
     public virtual string FormatSaveException(Exception ex)
     {
         var sb = new StringBuilder();
-        IReadOnlyList<EntityEntry> bad_entries = null;
+        List<EntityEntry> bad_entries = null;
         if (ex is DbUpdateConcurrencyException exc)
         {
             sb.AppendLine("[Datu bāzes konkurences kļūda]");
-            bad_entries = exc.Entries;
+            bad_entries = exc.Entries.Take(50).ToList();
         }
         else if (ex is DbUpdateException exu)
         {
             sb.AppendLine("[Datu saglabāšanas kļūda]");
-            bad_entries = exu.Entries;
+            bad_entries = exu.Entries.Take(50).ToList();
         }
         else
         {
@@ -415,7 +415,7 @@ public class MyDbContext : DbContext
 
     public void RejectChanges()
     {
-        foreach (var entry in ChangeTracker.Entries())
+        foreach (var entry in ChangeTracker.Entries().ToList())
         {
             switch (entry.State)
             {
@@ -656,13 +656,14 @@ public class MyDbContext : DbContext
     /// <typeparam name="T">Entity type</typeparam>
     public void ClearLocalDbSet<T>() where T:class
     {
+        var state_manager = GetStateManager();
+
         ClearIdentityMap();
         ClearReferenceMap();
         ClearLocalView();
 
         void ClearIdentityMap()
         {
-            var state_manager = GetStateManager();
             var fi_identitymaps = Utils.GetField(state_manager.GetType(), "_identityMaps");
             var identitymaps = (Dictionary<IKey, IIdentityMap>)fi_identitymaps.GetValue(state_manager);
             var entoty_type = Model.FindEntityType(typeof(T));
@@ -674,15 +675,14 @@ public class MyDbContext : DbContext
 
         void ClearReferenceMap()
         {
-            var state_manager = GetStateManager();
             var fi_referencemap = Utils.GetField(state_manager.GetType(), "_entityReferenceMap");
             var referencemap = (EntityReferenceMap)fi_referencemap.GetValue(state_manager);
             if (referencemap == null) return;
             var fi_unchangedreferencemap = Utils.GetField(referencemap.GetType(), "_unchangedReferenceMap");
             var unchangedreferencemap = (Dictionary<object, InternalEntityEntry>)fi_unchangedreferencemap.GetValue(referencemap);
             if (unchangedreferencemap == null || unchangedreferencemap.Count == 0) return;
-            var entoty_type = Model.FindEntityType(typeof(T));
-            var kv1 = unchangedreferencemap.Where(x => x.Value.EntityType != entoty_type);
+            var entity_type = Model.FindEntityType(typeof(T));
+            var kv1 = unchangedreferencemap.Where(x => x.Value.EntityType != entity_type);
             var new_unchangedreferencemap = new Dictionary<object, InternalEntityEntry>(kv1);
             fi_unchangedreferencemap.SetValue(referencemap, new_unchangedreferencemap);
             unchangedreferencemap.Clear();
@@ -714,10 +714,7 @@ public class MyDbContext : DbContext
             fi_countchanges.SetValue(localview, 0);
             var fi_count = Utils.GetField(tp_localview, "_count");
             fi_count.SetValue(localview, (int?)0);
-            int ct = localview.Count;
         }
-
-
     }
 
     /*void dsfasf<T>(Expression<Func<T, object?>> foreignKeyExpression)
@@ -735,8 +732,8 @@ public class MyDbContext : DbContext
         {
             var item_to = dic_to[keyselector(item_from)];
             CopyEntry(item_from, item_to, false, true);
-            var entry_to = Entry(item_to);
-            entry_to.State = EntityState.Unchanged;
+            var entry_to = Entry(item_to).GetInfrastructure();
+            entry_to.SetEntityState(EntityState.Unchanged, true);
         }
     }
 
@@ -749,8 +746,8 @@ public class MyDbContext : DbContext
         {
             var item_to = dic_to[keyselector(item_from)];
             CopyEntry(item_from, item_to, false, true);
-            var entry_to = Entry(item_to);
-            entry_to.State = EntityState.Unchanged;
+            var entry_to = Entry(item_to).GetInfrastructure();
+            entry_to.SetEntityState(EntityState.Unchanged, true);
         }
     }
 
@@ -766,8 +763,8 @@ public class MyDbContext : DbContext
         {
             var item_to = dic_to[keyselector(item_from)];
             CopyEntry(item_from, item_to, false, true);
-            var entry_to = Entry(item_to);
-            entry_to.State = EntityState.Unchanged;
+            var entry_to = Entry(item_to).GetInfrastructure();
+            entry_to.SetEntityState(EntityState.Unchanged, true);
         }
         foreach (var item in items_to_add)
         {
@@ -777,7 +774,7 @@ public class MyDbContext : DbContext
         {
             var entry = Entry(item);
             Remove(item);
-            entry.State = EntityState.Unchanged;
+            entry.State = EntityState.Detached;
         }
     }
 
@@ -793,8 +790,8 @@ public class MyDbContext : DbContext
         {
             var item_to = dic_to[keyselector(item_from)];
             CopyEntry(item_from, item_to, false, true);
-            var entry_to = Entry(item_to);
-            entry_to.State = EntityState.Unchanged;
+            var entry_to = Entry(item_to).GetInfrastructure();
+            entry_to.SetEntityState(EntityState.Unchanged, true);
         }
         foreach (var item in items_to_add)
         {
@@ -804,7 +801,7 @@ public class MyDbContext : DbContext
         {
             var entry = Entry(item);
             Remove(item);
-            entry.State = EntityState.Unchanged;
+            entry.State = EntityState.Detached;
         }
         
     }
@@ -874,8 +871,8 @@ public class MyDbContext : DbContext
             {
                 var item_to = DicCurrent[KeySelector(item_from)];
                 Ctx.CopyEntry(item_from, item_to, false, true);
-                var entry_to = Ctx.Entry(item_to);
-                entry_to.State = EntityState.Unchanged;
+                var entry_to = Ctx.Entry(item_to).GetInfrastructure();
+                entry_to.SetEntityState(EntityState.Unchanged, true);
             }
         }
     }

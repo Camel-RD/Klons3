@@ -25,9 +25,12 @@ Delet1
 
 Test BindingListView with DataMember
 
-
 Algas ieturējumi
 
-Remove unnecessary navigation propertyies
+Limit count of entities shown for errors
+
+check cascade delete configs
+
+MergeUpdates -> TS also need to be updated
 
  

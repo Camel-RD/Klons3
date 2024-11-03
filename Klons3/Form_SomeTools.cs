@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Klons3.ModelsF;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace KlonsF
 {
@@ -525,8 +526,6 @@ namespace KlonsF
             MessageBox.Show("Done");
         }
 
-        List<WeakReference<F_OPSD>> ws = new();
-
         void TestReload()
         {
             var sw = new Stopwatch();
@@ -600,15 +599,38 @@ namespace KlonsF
             richTextBox1.AppendText(msg);
         }
 
-
-
-        private void eFReloadAllDocsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TestReloadDocs()
         {
             for (int i = 0; i < 10; i++)
             {
                 richTextBox1.AppendText($"{i} ");
                 TestReload2();
             }
+        }
+
+
+        void TestSetState()
+        {
+            var ctx = KlonsData.St.DbContextF;
+            /*
+            var ac = new F_ACP21()
+            {
+                AC = "TEST"
+            };
+            ctx.F_ACP21.Add(ac);
+            ctx.SaveChanges();*/
+            
+            var ac = ctx.F_ACP21.Find("TEST");
+            ac.NAME = "test2";
+            var entry = ctx.Entry(ac);
+            //var internal_entry = entry.GetInfrastructure();
+            //internal_entry.SetEntityState(EntityState.Unchanged, true);
+            entry.State = EntityState.Unchanged;
+        }
+
+        private void miTestXYZ_Click(object sender, EventArgs e)
+        {
+            TestSetState();
         }
 
     }
