@@ -183,7 +183,7 @@ public class MyBindingSourceEf : BindingSource
     {
         if (BindingListView == null) return;
         var blv = (IMyBindingListView)BindingListView;
-        blv.ListItemPropertyChanged += Blv_ListItemPropertyChanged;
+        blv.ListItemPropertyChanged -= Blv_ListItemPropertyChanged;
     }
 
     public T GetCurrentItem<T>() where T : class

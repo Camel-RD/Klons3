@@ -208,7 +208,7 @@ public class MyBindingSourceEf2 : BindingSource, ISupportInitialize
     protected void UnHookBindingListView(IList list)
     {
         if (list is not IMyBindingListView blv) return;
-        blv.ListItemPropertyChanged += Blv_ListItemPropertyChanged;
+        blv.ListItemPropertyChanged -= Blv_ListItemPropertyChanged;
     }
 
 

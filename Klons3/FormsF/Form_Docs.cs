@@ -30,7 +30,21 @@ namespace KlonsF.Forms
             LoadColumnWidthsFromSettings();
             FormInitOnLoad();
             toolStrip1.Visible = true;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.GetTotalMemory(true);
+            if (WR == null)
+            {
+                WR = new WeakReference<Form_Docs>(this);
+            }
+            else
+            {
+                if (WR.TryGetTarget(out _))
+                    MyMainForm.ShowInfo("Old Form_Docs still alive");
+            }
         }
+
+        static WeakReference<Form_Docs> WR = null;
 
         private string warnAfterValidation = null;
         private static string LastConnectionString = null;
@@ -222,14 +236,6 @@ namespace KlonsF.Forms
             dgcOpsSumm.Visible = b1;
         }
 
-        private void FormDocs_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            bsOPS.ListItemRemoved -= BsOPS_ListItemRemoved;
-            bsOPS.ListItemRemoving -= BsOPS_ListItemRemoving;
-            bsOPS.ListItemPropertyChanged -= BsOPS_ListItemPropertyChanged;
-            bsOPSd.ListItemPropertyChanged -= BsOPSd_ListItemPropertyChanged;
-        }
-
         private void FormInitOnLoad()
         {
             if (MyDataSet.F_OPSD.Local.Count == 0)
@@ -243,9 +249,9 @@ namespace KlonsF.Forms
                 }
             }
 
-            this.bsOPSd.CurrentChanged += bsOPSd_CurrentChanged;
-            CheckOpsGrid();
+            bsOPSd.CurrentChanged += bsOPSd_CurrentChanged;
 
+            CheckOpsGrid();
             CheckColumns();
 
             bsOPS.ListItemRemoved += BsOPS_ListItemRemoved;
@@ -255,6 +261,17 @@ namespace KlonsF.Forms
 
             MyData.DbContextF.ChangeTracker.DetectedEntityChanges += ChangeTracker_DetectedEntityChanges;
         }
+
+        private void FormDocs_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            bsOPSd.CurrentChanged -= bsOPSd_CurrentChanged;
+            bsOPS.ListItemRemoved -= BsOPS_ListItemRemoved;
+            bsOPS.ListItemRemoving -= BsOPS_ListItemRemoving;
+            bsOPS.ListItemPropertyChanged -= BsOPS_ListItemPropertyChanged;
+            bsOPSd.ListItemPropertyChanged -= BsOPSd_ListItemPropertyChanged;
+            MyData.DbContextF.ChangeTracker.DetectedEntityChanges -= ChangeTracker_DetectedEntityChanges;
+        }
+
 
         private void ChangeTracker_DetectedEntityChanges(object sender, Microsoft.EntityFrameworkCore.ChangeTracking.DetectedEntityChangesEventArgs e)
         {

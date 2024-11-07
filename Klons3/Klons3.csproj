@@ -10,6 +10,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
     <NuGetAuditLevel>low</NuGetAuditLevel>
+    <Platforms>AnyCPU;x86;x64</Platforms>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationDefaultFont>Microsoft Sans Serif, 10pt</ApplicationDefaultFont>

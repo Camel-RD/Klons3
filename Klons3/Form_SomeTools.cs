@@ -18,6 +18,7 @@ using Klons3.ModelsF;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using KlonsF.Forms;
 
 namespace KlonsF
 {
@@ -27,6 +28,7 @@ namespace KlonsF
         {
             InitializeComponent();
         }
+
 
         string db_filename = @"D:\A1-docs\c_net\Klons3\DB\klons_str.fdb";
         string reports_folder = @"D:\A1-docs\c_net\Klons3\Klons3\Reports";

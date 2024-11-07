@@ -237,6 +237,7 @@ namespace Equin.ApplicationFramework
             SourceLists = empty_source_list;
             _objectBackupTable.Clear();
             ClearObjectViewCache();
+            _filter = null;
         }
 
         /// <summary>
@@ -499,24 +500,10 @@ namespace Equin.ApplicationFramework
             OnListChanged(ListChangedType.Reset, -1);
         }
 
-        public static event BindingListViewFilteringItemEventHandler FilteringItemGlobal;
-
         protected bool OnFilteringItem(T item)
         {
             bool pinclude = _filter.Include(item);
-            if (!pinclude) return false;
-            if (((IBindingListView)this).Filter.IsNOE()) return true;
-            if (FilteringItemGlobal == null) return true;
-            var invocationList = FilteringItemGlobal.GetInvocationList();
-            var args = new BindingListViewFilteringItemEventArgs(item);
-            foreach (var invocation in invocationList) 
-            {
-                var finvocation = invocation as BindingListViewFilteringItemEventHandler;
-                finvocation.Invoke(this, args);
-                if (args.Tested)
-                    return args.Include;
-            }
-            return true;
+            return pinclude;
         }
 
         /// <summary>
