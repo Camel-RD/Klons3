@@ -117,7 +117,14 @@ public class InvoiceRowData
     public void ReadFrom(M_ROWS dr_row)
     {
         Code = dr_row.Item.BARCODE;
-        Name = dr_row.Item.NAME;
+        if (dr_row.ItemText == null)
+        {
+            Name = dr_row.Item.NAME;
+        }
+        else
+        {
+            Name = dr_row.ItemText.TEXT;
+        }
         Unit = dr_row.UnitsRow.CODE;
         PVNTag = dr_row.PVNRate.CODE;
         Amount = dr_row.AMOUNT;
@@ -186,6 +193,7 @@ public class InvoiceMainData
     public bool ShowDiscountColumn { get; set; }
     public bool ShowPVNIdColumn { get; set; }
     public bool ShowCarrier { get; set; }
+    public bool ShowSignatures { get; set; }
 
     private DocAccData DocAccData = null;
 

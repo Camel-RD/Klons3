@@ -39,6 +39,7 @@ public partial class DbContextM : MyDbContext
     public virtual DbSet<M_ITEMS> M_ITEMS { get; set; }
     public virtual DbSet<M_ITEMS_CAT> M_ITEMS_CAT { get; set; }
     public virtual DbSet<M_ITEMS_PER_STORE> M_ITEMS_PER_STORE { get; set; }
+    public virtual DbSet<M_ITEMS_TEXTS> M_ITEMS_TEXTS { get; set; }
     public virtual DbSet<M_LINKS> M_LINKS { get; set; }
     public virtual DbSet<M_PAYMENTTYPE> M_PAYMENTTYPE { get; set; }
     public virtual DbSet<M_PRICE_LISTS> M_PRICE_LISTS { get; set; }
@@ -87,6 +88,13 @@ public partial class DbContextM : MyDbContext
             entity.Property(e => e.NAME)
                 .IsRequired()
                 .HasMaxLength(300);
+
+            entity.Property(e => e.STREET).HasMaxLength(50);
+            entity.Property(e => e.CITY).HasMaxLength(50);
+            entity.Property(e => e.STATE).HasMaxLength(50);
+            entity.Property(e => e.PARISH).HasMaxLength(50);
+            entity.Property(e => e.POSTALCODE).HasMaxLength(20);
+            entity.Property(e => e.COMMENTS).HasMaxLength(250);
 
             entity.HasOne(d => d.Country).WithMany()
                 .HasForeignKey(d => d.IDCOUNTRY)
@@ -394,6 +402,16 @@ public partial class DbContextM : MyDbContext
             entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
         });
 
+        modelBuilder.Entity<M_ITEMS_TEXTS>(entity =>
+        {
+            entity.HasOne(d => d.Item).WithMany(p => p.ItemTexts)
+                .HasForeignKey(d => d.IDITEM)
+                .OnDelete(DeleteBehavior.ClientNoAction)
+                .HasConstraintName("FK_M_ITEMS_TEXTS_IDITEMS");
+            entity.Property(e => e.TEXT).HasMaxLength(300);
+            entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
+        });
+
         modelBuilder.Entity<M_LINKS>(entity =>
         {
             entity.HasKey(e => new { e.ID1, e.ID2 });
@@ -535,6 +553,11 @@ public partial class DbContextM : MyDbContext
                 .OnDelete(DeleteBehavior.ClientNoAction)
                 .HasConstraintName("FK_M_ROWS_IDITEM");
 
+            entity.HasOne(d => d.ItemText).WithMany()
+                .HasForeignKey(d => d.IDITEMTEXT)
+                .OnDelete(DeleteBehavior.ClientNoAction)
+                .HasConstraintName("FK_M_ROWS_IDITEMTEXT");
+
             entity.HasOne(d => d.PVNRate).WithMany()
                 .HasForeignKey(d => d.IDPVNRATE)
                 .OnDelete(DeleteBehavior.ClientNoAction)
@@ -564,6 +587,13 @@ public partial class DbContextM : MyDbContext
             entity.Property(e => e.PVNREGNR).HasMaxLength(20);
             entity.Property(e => e.REGNR).HasMaxLength(20);
 
+            entity.Property(e => e.STREET).HasMaxLength(50);
+            entity.Property(e => e.CITY).HasMaxLength(50);
+            entity.Property(e => e.STATE).HasMaxLength(50);
+            entity.Property(e => e.PARISH).HasMaxLength(50);
+            entity.Property(e => e.POSTALCODE).HasMaxLength(20);
+            entity.Property(e => e.EMAIL).HasMaxLength(256  );
+
             entity.HasOne(d => d.Category).WithMany()
                 .HasForeignKey(d => d.IDCAT)
                 .OnDelete(DeleteBehavior.ClientNoAction)
@@ -578,7 +608,13 @@ public partial class DbContextM : MyDbContext
                 .HasForeignKey(d => d.TP)
                 .OnDelete(DeleteBehavior.ClientNoAction)
                 .HasConstraintName("FK_M_STORES_TP");
-            
+
+            entity.HasOne(d => d.Country).WithMany()
+                .HasForeignKey(d => d.IDCOUNTRY)
+                .OnDelete(DeleteBehavior.ClientNoAction)
+                .HasConstraintName("FK_M_STORES_IDCOUNTRY");
+
+
             entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
 
             entity.Ignore(x => x.XStoreType);
@@ -613,6 +649,8 @@ public partial class DbContextM : MyDbContext
             entity.Property(e => e.CODE)
                 .IsRequired()
                 .HasMaxLength(20);
+            entity.Property(e => e.CODE2)
+                .HasMaxLength(5);
             entity.Property(e => e.NAME).HasMaxLength(100);
             entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
         });
@@ -650,6 +688,7 @@ public partial class DbContextM : MyDbContext
     public BindingList<M_ITEMS> BL_M_ITEMS { get; set; }
     public BindingList<M_ITEMS_CAT> BL_M_ITEMS_CAT { get; set; }
     public BindingList<M_ITEMS_PER_STORE> BL_M_ITEMS_PER_STORE { get; set; }
+    public BindingList<M_ITEMS_TEXTS> BL_M_ITEMS_TEXTS { get; set; }
     public BindingList<M_LINKS> BL_M_LINKS { get; set; }
     public BindingList<M_PAYMENTTYPE> BL_M_PAYMENTTYPE { get; set; }
     public BindingList<M_PRICE_LISTS> BL_M_PRICE_LISTS { get; set; }

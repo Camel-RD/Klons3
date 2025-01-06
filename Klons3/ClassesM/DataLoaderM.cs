@@ -11,6 +11,8 @@ using Klons3.ModelsM;
 using KlonsLIB;
 using Microsoft.EntityFrameworkCore;
 using MergeTaskList = KlonsLIB.Data.MyDbContext.MergeTaskList;
+using Org.BouncyCastle.Utilities.Collections;
+using System.Windows.Forms;
 
 namespace KlonsM.Classes;
 
@@ -61,6 +63,7 @@ public static class DataLoaderM
             ctx.M_STORES,
             ctx.M_ITEMS,
             ctx.M_ITEMS_PER_STORE,
+            ctx.M_ITEMS_TEXTS,
             ctx.M_BANKACCOUNTS,
             ctx.M_CONTACTS,
             ctx.M_ADDRESSSES,
@@ -378,20 +381,19 @@ public static class DataLoaderM
         return ret;
     }
 
-    public static List<M_ITEMS_PER_STORE> GetBy_SP_M_CURRENTSTOCK_01(
-        int PIDITEM)
+    public static List<SP_M_CURRENTSTOCK> GetBy_SP_M_CURRENTSTOCK_01(int PIDITEM)
     {
         var ret = MyData.DbContextM.Database
-            .SqlQuery<M_ITEMS_PER_STORE>($"SELECT * FROM SP_M_CURRENTSTOCK_01({PIDITEM})")
+            .SqlQuery<SP_M_CURRENTSTOCK>($"SELECT * FROM SP_M_CURRENTSTOCK_01({PIDITEM})")
             .ToList();
         return ret;
     }
 
-    public static List<M_ITEMS_PER_STORE> GetBy_SP_M_CURRENTSTOCK_02(
-        int PIDITEM)
+    public static List<SP_M_CURRENTSTOCK> GetBy_SP_M_CURRENTSTOCK_02(int PIDSTORE)
     {
         var ret = MyData.DbContextM.Database
-            .SqlQuery<M_ITEMS_PER_STORE>($"SELECT * FROM SP_M_CURRENTSTOCK_02({PIDITEM})")
+            .SqlQuery<SP_M_CURRENTSTOCK>($"SELECT * FROM SP_M_CURRENTSTOCK_02({PIDSTORE})")
+            .AsNoTracking()
             .ToList();
         return ret;
     }

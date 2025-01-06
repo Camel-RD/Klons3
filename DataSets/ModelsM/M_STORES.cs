@@ -19,6 +19,15 @@ public partial class M_STORES : EntityBase
     public string ACC21 { get; set; } = ".?";
     public string ACC23 { get; set; } = ".?";
     public string ACC53 { get; set; } = ".?";
+
+    public int? IDCOUNTRY { get; set; }
+    public string STREET { get; set; }
+    public string CITY { get; set; }
+    public string STATE { get; set; }
+    public string PARISH { get; set; }
+    public string POSTALCODE { get; set; }
+    public string EMAIL { get; set; }
+
     public DateTime TS { get; set; }
     public virtual M_STORES_CAT Category { get; set; }
     public virtual ObservableListViewSource<M_ADDRESSSES> Addresses { get; set; } = new();
@@ -30,6 +39,7 @@ public partial class M_STORES : EntityBase
 
     public virtual M_PVNTYPE PVNType { get; set; }
     public virtual M_STORETYPE StoreType { get; set; }
+    public virtual M_COUNTRIES Country { get; set; }
 
     public KlonsM.Classes.EStoreType XStoreType
     {

@@ -124,7 +124,6 @@
             this.myGrid1.ColumnWidth1 = 20;
             this.myGrid1.ColumnWidth2 = 400;
             this.myGrid1.ColumnWidth3 = 100;
-            this.myGrid1.DefaultHeight = 22;
             this.myGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myGrid1.EnableSort = true;
             this.myGrid1.Location = new System.Drawing.Point(0, 0);
@@ -526,7 +525,7 @@
             this.bnavLikmes.CountItemFormat = " no {0}";
             this.bnavLikmes.DeleteItem = null;
             this.bnavLikmes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bnavLikmes.ImageScalingSize = new System.Drawing.Size(21, 21);
+            this.bnavLikmes.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bnavLikmes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,

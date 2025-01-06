@@ -46,7 +46,6 @@ namespace KlonsA.Forms
             for (int i = yr - 2; i <= yr + 1; i++)
                 cbYear.Items.Add(i.ToString());
             cbMonth.SelectedIndex = mt - 1;
-            WindowState = FormWindowState.Maximized;
         }
 
         public void LoadParams()

@@ -172,7 +172,7 @@
             bnavList.DeleteItem = null;
             bnavList.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavList.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bnavList.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslGrid, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavList.Location = new System.Drawing.Point(0, 533);
             bnavList.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -725,7 +725,6 @@
             sgrRow.ColumnWidth1 = 15;
             sgrRow.ColumnWidth2 = 130;
             sgrRow.ColumnWidth3 = 150;
-            sgrRow.DefaultHeight = 22;
             sgrRow.Dock = System.Windows.Forms.DockStyle.Right;
             sgrRow.EnableSort = true;
             sgrRow.Location = new System.Drawing.Point(670, 25);
@@ -1117,7 +1116,7 @@
             // toolStrip1
             // 
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -1163,7 +1162,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { maksājumiFiziskāmPersonāmToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";

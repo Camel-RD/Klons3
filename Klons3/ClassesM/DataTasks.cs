@@ -113,7 +113,12 @@ public static class DataTasksM
         }
         if (dr_doc.IDSTOREIN == 1 || dr_doc.IDSTOREOUT == 1)
         {
-            ret.AddDocError(dr_doc.ID, "Jānorāda noliktavas.");
+            ret.AddDocError(dr_doc.ID, "Jānorāda noliktavas/partneri.");
+            return ret;
+        }
+        if (dr_doc.NR.IsNOE())
+        {
+            ret.AddDocError(dr_doc.ID, "Jānorāda dokumenta numurs.");
             return ret;
         }
         if (!SomeDataDefsM.IsGoodStoreOut(dr_doc.XDocType, dr_doc.XStoreOutType))

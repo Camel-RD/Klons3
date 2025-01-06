@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KlonsA.Classes;
 using KlonsLIB.Data;
 using KlonsLIB.Misc;
 
@@ -17,8 +18,17 @@ public partial class A_PAYLISTS : EntityBase
     public short DOPAY { get; set; }
     public decimal TOTAL_PAY { get; set; }
     public DateTime TS { get; set; }
+    public int TPPAY { get; set; } = 0;
+
     public virtual ObservableListViewSource<A_PAYLISTS_R> PayListRows { get; set; } = new ObservableListViewSource<A_PAYLISTS_R>();
     public virtual A_DEPARTMENTS Department { get; set; }
+
+    public EPaylistPaymentType XTpPay
+    {
+        get { return (EPaylistPaymentType)this.TPPAY; }
+        set { this.TPPAY = (int)value; }
+    }
+
 
     public override string GetInfoView()
     {

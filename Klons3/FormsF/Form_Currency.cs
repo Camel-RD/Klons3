@@ -32,7 +32,6 @@ namespace KlonsF.Forms
         private void Form_Currency_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void bnavCurrency_ItemDeleting(object sender, CancelEventArgs e)

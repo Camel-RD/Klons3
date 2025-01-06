@@ -254,6 +254,9 @@ namespace KlonsF.Forms
             cbFontSize.Items.AddRange(new object[] { myItem5, myItem6, myItem7, myItem8, myItem9, myItem10, myItem11, myItem12, myItem13, myItem14, myItem15, myItem16, myItem17 });
             cbFontSize.ItemStrings = new string[]
     {
+    "05",
+    "06",
+    "07",
     "08",
     "09",
     "10",

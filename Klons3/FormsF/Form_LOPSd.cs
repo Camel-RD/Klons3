@@ -30,7 +30,6 @@ namespace KlonsF.Forms
         private void FormLOPSd_Load(object sender, EventArgs e)
         {
             bsLOPSd.Fill();
-            WindowState = FormWindowState.Maximized;
         }
 
         private int SearchText(string text, int colindex,

@@ -1,4 +1,6 @@
 ﻿
+using KlonsM.Classes;
+
 namespace KlonsM.FormsM
 {
     partial class FormM_Stores
@@ -49,7 +51,15 @@ namespace KlonsM.FormsM
             dgcAcc23 = new KlonsLIB.Components.MyDgvTextboxColumn2();
             bsAccounts23 = new KlonsLIB.Data.MyBindingSourceEf(components);
             dgcAcc53 = new KlonsLIB.Components.MyDgvTextboxColumn2();
+            dgcStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcParish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcPostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcIdCountry = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            dgcEMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bsAccounts53 = new KlonsLIB.Data.MyBindingSourceEf(components);
+            bsCountry = new KlonsLIB.Data.MyBindingSourceEf(components);
             dgcID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bNav = new KlonsLIB.Components.MyBindingNavigator();
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -88,6 +98,7 @@ namespace KlonsM.FormsM
             ((System.ComponentModel.ISupportInitialize)bsAccounts21).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts23).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts53).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCountry).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bNav).BeginInit();
             bNav.SuspendLayout();
             panel1.SuspendLayout();
@@ -108,7 +119,7 @@ namespace KlonsM.FormsM
             dgvRows.AutoSave = true;
             dgvRows.BackgroundColor = System.Drawing.SystemColors.Control;
             dgvRows.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcTP, dgcIdCat, dgcRegNr, dgcPVNRegNr, dgcAddr, dgcPVNTp, dgcAcc21, dgcAcc23, dgcAcc53, dgcID });
+            dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcCode, dgcName, dgcTP, dgcIdCat, dgcRegNr, dgcPVNRegNr, dgcAddr, dgcPVNTp, dgcAcc21, dgcAcc23, dgcAcc53, dgcStreet, dgcCity, dgcState, dgcParish, dgcPostalCode, dgcIdCountry, dgcEMail, dgcID });
             dgvRows.DataSource = bsStores;
             dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvRows.Location = new System.Drawing.Point(0, 30);
@@ -257,10 +268,72 @@ namespace KlonsM.FormsM
             dgcAcc53.ValueMember = "ID";
             dgcAcc53.Width = 80;
             // 
+            // dgcStreet
+            // 
+            dgcStreet.DataPropertyName = "STREET";
+            dgcStreet.HeaderText = "iela, nr.";
+            dgcStreet.Name = "dgcStreet";
+            dgcStreet.Width = 125;
+            // 
+            // dgcCity
+            // 
+            dgcCity.DataPropertyName = "CITY";
+            dgcCity.HeaderText = "pilsēta";
+            dgcCity.Name = "dgcCity";
+            dgcCity.Width = 125;
+            // 
+            // dgcState
+            // 
+            dgcState.DataPropertyName = "STATE";
+            dgcState.HeaderText = "novads";
+            dgcState.Name = "dgcState";
+            dgcState.Width = 125;
+            // 
+            // dgcParish
+            // 
+            dgcParish.DataPropertyName = "PARISH";
+            dgcParish.HeaderText = "pagasts";
+            dgcParish.Name = "dgcParish";
+            dgcParish.Width = 125;
+            // 
+            // dgcPostalCode
+            // 
+            dgcPostalCode.DataPropertyName = "POSTALCODE";
+            dgcPostalCode.HeaderText = "indeks";
+            dgcPostalCode.Name = "dgcPostalCode";
+            dgcPostalCode.Width = 90;
+            // 
+            // dgcIdCountry
+            // 
+            this.dgcIdCountry.DataPropertyName = "IDCOUNTRY";
+            this.dgcIdCountry.DataSource = this.bsCountry;
+            this.dgcIdCountry.DisplayMember = "NAME";
+            this.dgcIdCountry.DisplayStyleForCurrentCellOnly = true;
+            this.dgcIdCountry.HeaderText = "valsts";
+            this.dgcIdCountry.MaxDropDownItems = 15;
+            this.dgcIdCountry.MinimumWidth = 8;
+            this.dgcIdCountry.Name = "dgcIdCountry";
+            this.dgcIdCountry.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcIdCountry.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgcIdCountry.ValueMember = "ID";
+            this.dgcIdCountry.Width = 200;
+            // 
+            // dgcEMail
+            // 
+            dgcEMail.DataPropertyName = "EMAIL";
+            dgcEMail.HeaderText = "e-pasts";
+            dgcEMail.Name = "dgcEMail";
+            dgcEMail.Width = 125;
+            // 
             // bsAccounts53
             // 
             bsAccounts53.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsMData", "M_ACCOUNTS");
             bsAccounts53.Sort = "ID";
+            // 
+            // bsCountry
+            // 
+            this.bsCountry.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsMData", "M_COUNTRIES");
+            this.bsCountry.Sort = "NAME";
             // 
             // dgcID
             // 
@@ -281,7 +354,7 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = bindingNavigatorDeleteItem;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, bindingNavigatorSaveItem, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 419);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -497,7 +570,7 @@ namespace KlonsM.FormsM
             // 
             toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { btAtlikumi, btAddresses, btContacts, btBankAccounts, btVehicles });
             toolStrip1.Location = new System.Drawing.Point(0, 394);
             toolStrip1.Name = "toolStrip1";
@@ -576,6 +649,7 @@ namespace KlonsM.FormsM
             ((System.ComponentModel.ISupportInitialize)bsAccounts21).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts23).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAccounts53).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCountry).EndInit();
             ((System.ComponentModel.ISupportInitialize)bNav).EndInit();
             bNav.ResumeLayout(false);
             bNav.PerformLayout();
@@ -627,6 +701,7 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.ToolStripButton btVehicles;
         private KlonsLIB.Components.MyPickRowTextBox2 cbType;
         private KlonsLIB.Data.MyBindingSourceEf bsStoresCat;
+        private KlonsLIB.Data.MyBindingSourceEf bsCountry;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcTP;
@@ -638,6 +713,13 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc21;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc23;
         private KlonsLIB.Components.MyDgvTextboxColumn2 dgcAcc53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcStreet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcParish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcPostalCode;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgcIdCountry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcEMail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcID;
     }
 }

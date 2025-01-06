@@ -48,6 +48,7 @@ namespace KlonsM.FormsM
             izmaksuKopsavilkumsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             miSplitPVN = new System.Windows.Forms.ToolStripMenuItem();
             miImportRows = new System.Windows.Forms.ToolStripMenuItem();
+            miMakeEInvoice = new System.Windows.Forms.ToolStripMenuItem();
             dzēstDokumentuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             iegrāmatotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -196,7 +197,7 @@ namespace KlonsM.FormsM
             // 
             menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { dokumentsToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(9, 9);
             menuStrip1.Name = "menuStrip1";
@@ -344,7 +345,7 @@ namespace KlonsM.FormsM
             // 
             // izdrukaiToolStripMenuItem
             // 
-            izdrukaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { pavadzīmeToolStripMenuItem });
+            izdrukaiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { pavadzīmeToolStripMenuItem, miMakeEInvoice });
             izdrukaiToolStripMenuItem.Name = "izdrukaiToolStripMenuItem";
             izdrukaiToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
             izdrukaiToolStripMenuItem.Text = "Izdrukai";
@@ -1077,7 +1078,7 @@ namespace KlonsM.FormsM
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bniNew, bniDelete, bniSave, tsbFindPrev, tsbFind, tsbFindNext });
             bNav.Location = new System.Drawing.Point(0, 483);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -1213,6 +1214,13 @@ namespace KlonsM.FormsM
             tsbFindNext.Size = new System.Drawing.Size(28, 28);
             tsbFindNext.Text = "Iet uz nākošo";
             tsbFindNext.Click += tsbFindNext_Click;
+            // 
+            // tsiMakeEInvoice
+            // 
+            miMakeEInvoice.Name = "tsiMakeEInvoice";
+            miMakeEInvoice.Size = new System.Drawing.Size(145, 22);
+            miMakeEInvoice.Text = "E-Rēķins";
+            miMakeEInvoice.Click += miMakeEInvoice_Click;
             // 
             // FormM_Doc
             // 
@@ -1365,5 +1373,6 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsAcc7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcRowsIdSeq;
+        private System.Windows.Forms.ToolStripMenuItem miMakeEInvoice;
     }
 }

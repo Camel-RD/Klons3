@@ -74,11 +74,9 @@
             // dgvCat1
             // 
             dgvCat1.AutoGenerateColumns = false;
-            dgvCat1.AutoSave = true;
             dgvCat1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.488F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 186);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -190,7 +188,6 @@
             bnCat1.DataGrid = dgvCat1;
             bnCat1.DeleteItem = bindingNavigatorDeleteItem;
             bnCat1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            bnCat1.ImageScalingSize = new System.Drawing.Size(21, 21);
             bnCat1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, bindingNavigatorSaveItem });
             bnCat1.Location = new System.Drawing.Point(0, 298);
             bnCat1.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -211,7 +208,7 @@
             bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
             bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(68, 27);
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(63, 27);
             bindingNavigatorAddNewItem.Text = "Jauns";
             // 
             // bindingNavigatorCountItem
@@ -226,7 +223,7 @@
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(68, 27);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(63, 27);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             // 
             // bindingNavigatorMoveFirstItem
@@ -235,7 +232,7 @@
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(25, 27);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 27);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -244,7 +241,7 @@
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(25, 27);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 27);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
@@ -271,7 +268,7 @@
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(25, 27);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 27);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             // 
             // bindingNavigatorMoveLastItem
@@ -280,7 +277,7 @@
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(25, 27);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 27);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
@@ -293,7 +290,7 @@
             bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             bindingNavigatorSaveItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorSaveItem.Image");
             bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
-            bindingNavigatorSaveItem.Size = new System.Drawing.Size(25, 27);
+            bindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 27);
             bindingNavigatorSaveItem.Text = "Saglabāt";
             // 
             // FormP_Cat1

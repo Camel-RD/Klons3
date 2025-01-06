@@ -30,6 +30,17 @@ namespace KlonsF.Forms
             dgvPersons.CellValidating += DgvPersons_CellValidating;
         }
 
+        public static string GetClId(string clid)
+        {
+            var fm = new Form_Persons();
+            //fm.tbCode.Text = code;
+            fm.SelectedValueStr = clid;
+            fm.FindPerson(clid);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValueStr;
+        }
+
         private void DgvPersons_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             var col = dgvPersons.Columns[e.ColumnIndex];
@@ -40,12 +51,28 @@ namespace KlonsF.Forms
         private void FormPersons_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
+            if (!SelectedValueStr.IsNOE())
+                FindPerson(SelectedValueStr);
         }
+
         private void FormPersons_Shown(object sender, EventArgs e)
         {
         }
 
+        public void FindPerson(string clid)
+        {
+            if (bsPersons.Count == 0) return;
+            if (clid.IsNOE()) return;
+            for (int i = 0; i < bsPersons.Count; i++)
+            {
+                var dr = bsPersons.GetItem<F_PERSONS>(i);
+                if (dr.CLID == clid)
+                {
+                    bsPersons.Position = i;
+                    return;
+                }
+            }
+        }
         private void CheckFilter()
         {
             string s = tbSearch.Text.Nz().ToLower();
@@ -70,6 +97,12 @@ namespace KlonsF.Forms
             if (e.KeyChar == (char) Keys.Return)
             {
                 CheckFilter();
+            }
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tbSearch.Text = null;
+                CheckFilter();
+                e.Handled = true;
             }
         }
 

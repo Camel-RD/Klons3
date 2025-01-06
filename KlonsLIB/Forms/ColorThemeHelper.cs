@@ -4,7 +4,9 @@ using System.Linq;
 using System.Windows.Forms;
 using KlonsLIB.Components;
 using KlonsLIB.Misc;
+#if USESOURCEGRID
 using KlonsLIB.MySourceGrid;
+#endif
 
 namespace KlonsLIB.Forms
 {
@@ -392,9 +394,9 @@ namespace KlonsLIB.Forms
                 dgv.RowHeadersDefaultCellStyle.ForeColor =
                     mycolortheme.GetColor(dgv.RowHeadersDefaultCellStyle.ForeColor, mycolortheme.ControlTextColor);
             }
-            else if (c is MyGrid mygrid)
+            else if (c is IApplyColorTheme ic)
             {
-                mygrid.ApplyColorTheme(mycolortheme);
+                ic.ApplyColorTheme(mycolortheme);
             }
             else if (c is MyCheckBox)
             {

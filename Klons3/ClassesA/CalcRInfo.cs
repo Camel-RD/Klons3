@@ -57,7 +57,8 @@ namespace KlonsA.Classes
             }
         }
 
-        public static DateTime ProgressiveIINStartDate = new DateTime(2018, 1, 1);
+        public static DateTime ProgressiveIINStartDate { get; } = new DateTime(2018, 1, 1);
+        public static DateTime ProgressiveIINEndDate { get; } = new DateTime(2024, 12, 31);
 
         public void CalcR(SalarySheetRowInfo sr, DateTime dt1, DateTime dt2)
         {
@@ -86,7 +87,7 @@ namespace KlonsA.Classes
             var pr1 = fPersonR.LinkedPeriods[0].Item1 as A_PERSONS_R;
             IsPensioner = pr1.PENSIONER == 1;
             HasTaxDoc = !string.IsNullOrEmpty(pr1.TAXDOC_NO);
-            UseProgresiveIINRate = (dt1 >= ProgressiveIINStartDate);
+            UseProgresiveIINRate = (dt1 >= ProgressiveIINStartDate && dt2 <= ProgressiveIINEndDate);
 
             GetRatesForPerson(wt1, pr1, dr_likmes, dt1);
 
@@ -161,9 +162,9 @@ namespace KlonsA.Classes
 
         public static void GetRatesForPerson(CalcRRow2 wt, A_PERSONS_R drpr, A_RATES drl, DateTime dt)
         {
-            wt.UseProgresiveIINRate = dt >= ProgressiveIINStartDate;
+            wt.UseProgresiveIINRate = dt >= ProgressiveIINStartDate && dt <= ProgressiveIINEndDate;
             wt.HasTaxDoc = !string.IsNullOrEmpty(drpr.TAXDOC_NO);
-            if (dt < ProgressiveIINStartDate)
+            if (dt < ProgressiveIINStartDate || dt > ProgressiveIINEndDate)
             {
                 wt.RateIIN = drl.IIN_LIKME;
                 wt.RateIIN2 = drl.IIN_LIKME;
@@ -237,10 +238,12 @@ namespace KlonsA.Classes
                     wt.ExRetaliation = drl.REPR;
 
                 if (drpr.PENSIONER == 1 || drpr.PENSIONER_SP == 1)
+                {
                     wt.ExUntaxedMinimum = 0.0M;
+                }
                 else
                 {
-                    if (dt < ProgressiveIINStartDate)
+                    if (dt < ProgressiveIINStartDate || dt > ProgressiveIINEndDate)
                     {
                         wt.ExUntaxedMinimum = drl.NEPLIEK_MIN;
                     }
@@ -278,10 +281,12 @@ namespace KlonsA.Classes
                     wt.ExRetaliation = drl.REPR;
 
                 if (drpr.PENSIONER == 1 || drpr.PENSIONER_SP == 1)
+                {
                     wt.ExUntaxedMinimum = 0.0M;
+                }
                 else
                 {
-                    if (dt1 < ProgressiveIINStartDate)
+                    if (dt1 < ProgressiveIINStartDate || dt1 > ProgressiveIINEndDate)
                     {
                         wt.ExUntaxedMinimum = drl.NEPLIEK_MIN;
                     }

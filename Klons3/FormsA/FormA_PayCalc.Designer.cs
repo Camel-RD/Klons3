@@ -404,7 +404,6 @@
             Name = "FormA_PayCalc";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Daļēji izmaksātie algas aprēķini";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += Form_PayCalc_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

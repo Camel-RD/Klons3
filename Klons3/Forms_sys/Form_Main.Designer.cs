@@ -1086,6 +1086,7 @@ namespace KlonsF
             miPNotikumi.Name = "miPNotikumi";
             miPNotikumi.Size = new Size(372, 24);
             miPNotikumi.Text = "Notikumi";
+            miPNotikumi.Click += miPNotikumi_Click;
             // 
             // toolStripSeparator9
             // 

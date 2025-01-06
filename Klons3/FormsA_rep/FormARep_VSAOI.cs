@@ -40,7 +40,6 @@ namespace KlonsA.Forms
         private void FormRep_VSAOI_Load(object sender, EventArgs e)
         {
             cbTp.SelectedIndex = 0;
-            WindowState = FormWindowState.Maximized;
         }
 
         public void LoadParams()

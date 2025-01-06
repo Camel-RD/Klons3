@@ -135,7 +135,7 @@ namespace KlonsF.Forms
             bnavBalsA1.DeleteItem = bindingNavigatorDeleteItem;
             bnavBalsA1.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavBalsA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavBalsA1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavBalsA1.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavBalsA1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslbActiveTable, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave, tskKoDarīt });
             bnavBalsA1.Location = new System.Drawing.Point(0, 372);
             bnavBalsA1.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -696,7 +696,6 @@ namespace KlonsF.Forms
             MinimumSize = new System.Drawing.Size(8, 416);
             Name = "Form_BilancesFormula";
             Text = "Bilances atskaišu formulas";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += Form_Bilance_Load;
             ((System.ComponentModel.ISupportInitialize)bsBalA1).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsBalA2).EndInit();

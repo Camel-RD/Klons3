@@ -43,7 +43,6 @@ namespace KlonsF.Forms
             dgcBalA3id2.Visible = false;
 
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void dgvBalA1_Enter(object sender, EventArgs e)
@@ -293,11 +292,11 @@ namespace KlonsF.Forms
         private void dgvBalA1_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgvBalA1.CurrentCell == null) return;
-            dgvBalA2.Enabled = !dgvBalA1.CurrentRow.IsNewRow;
-            dgvBalA3.Enabled = !(dgvBalA1.CurrentRow.IsNewRow ||
-                (dgvBalA2.CurrentRow != null && dgvBalA2.CurrentRow.IsNewRow));
-            panel1.Enabled = dgvBalA2.Enabled;
-            panel2.Enabled = dgvBalA2.Enabled;
+            SetControlEnabled(dgvBalA2, !dgvBalA1.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvBalA3, !(dgvBalA1.CurrentRow.IsNewRow ||
+                (dgvBalA2.CurrentRow != null && dgvBalA2.CurrentRow.IsNewRow)));
+            SetControlEnabled(panel1, dgvBalA2.Enabled);
+            SetControlEnabled(panel2, dgvBalA2.Enabled);
             dgcBalA1balid.ReadOnly =
                 dgvBalA1.NewRowIndex != dgvBalA1.CurrentCell.RowIndex;
         }
@@ -314,7 +313,7 @@ namespace KlonsF.Forms
         private void dgvBalA2_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgvBalA2.CurrentCell == null) return;
-            dgvBalA3.Enabled = !(dgvBalA2.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvBalA3, !(dgvBalA2.CurrentRow.IsNewRow));
         }
 
         private void dgvBalA2_Leave(object sender, EventArgs e)

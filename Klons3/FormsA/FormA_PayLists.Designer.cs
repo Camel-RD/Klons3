@@ -63,6 +63,7 @@
             dgcListsSNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcListsDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcListTotalPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dgcListTpPay = new System.Windows.Forms.DataGridViewComboBoxColumn();
             dgcListsDep = new KlonsLIB.Components.MyDgvMcCBColumn();
             bsDep = new KlonsLIB.Data.MyBindingSourceEf(components);
             dgcListsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -208,7 +209,7 @@
             bNav.DeleteItem = null;
             bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave, tsbRenum });
             bNav.Location = new System.Drawing.Point(0, 532);
             bNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -248,7 +249,7 @@
             dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dgvLists.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             dgvLists.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLists.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcListsYR, dgcListsMT, dgcListsSNR, dgcListsDT, dgcListTotalPay, dgcListsDep, dgcListsDescr, dgcListDoPay, dgcListsId });
+            dgvLists.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcListsYR, dgcListsMT, dgcListsSNR, dgcListsDT, dgcListTotalPay, dgcListTpPay, dgcListsDep, dgcListsDescr, dgcListDoPay, dgcListsId });
             dgvLists.DataSource = bsLists;
             dgvLists.Dock = System.Windows.Forms.DockStyle.Fill;
             dgvLists.Location = new System.Drawing.Point(0, 0);
@@ -321,6 +322,18 @@
             dgcListTotalPay.Name = "dgcListTotalPay";
             dgcListTotalPay.ReadOnly = true;
             dgcListTotalPay.Width = 105;
+            // 
+            // dgcTpPay
+            // 
+            dgcListTpPay.DataPropertyName = "TPPAY";
+            dgcListTpPay.DisplayStyleForCurrentCellOnly = true;
+            dgcListTpPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            dgcListTpPay.HeaderText = "veids";
+            dgcListTpPay.Name = "dgcTpPay";
+            dgcListTpPay.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            dgcListTpPay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            dgcListTpPay.ToolTipText = "kur/kā izmaksāts";
+            dgcListTpPay.Width = 90;
             // 
             // dgcListsDep
             // 
@@ -868,7 +881,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            menuStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { maksājumuSarakstiToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -1060,7 +1073,7 @@
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslPeriod });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -1138,7 +1151,6 @@
             sgrPayRow.ColumnWidth1 = 15;
             sgrPayRow.ColumnWidth2 = 125;
             sgrPayRow.ColumnWidth3 = 120;
-            sgrPayRow.DefaultHeight = 22;
             sgrPayRow.Dock = System.Windows.Forms.DockStyle.Right;
             sgrPayRow.EnableSort = true;
             sgrPayRow.Location = new System.Drawing.Point(969, 65);
@@ -1688,6 +1700,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsSNR;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListTotalPay;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dgcListTpPay;
         private KlonsLIB.Components.MyDgvMcCBColumn dgcListsDep;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcListsDescr;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgcListDoPay;

@@ -28,6 +28,10 @@ namespace KlonsA.Forms
             CheckMyFontAndColors();
             CheckDgvRowsAllowAddRows();
 
+            dgcListTpPay.DataSource = SomeDataDefsA.PaylistTpPay;
+            dgcListTpPay.DisplayMember = "Val";
+            dgcListTpPay.ValueMember = "Key";
+
             try
             {
                 MakeGrid();

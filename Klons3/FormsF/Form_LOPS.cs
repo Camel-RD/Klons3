@@ -29,7 +29,6 @@ namespace KlonsF.Forms
         private void FormLOPS_Load(object sender, EventArgs e)
         {
             this.bsLOPS.Fill();
-            WindowState = FormWindowState.Maximized;
         }
 
         private int SearchText(string text, int colindex,

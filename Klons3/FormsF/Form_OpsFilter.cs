@@ -14,6 +14,7 @@ using KlonsLIB.Data;
 using KlonsLIB.Forms;
 using KlonsLIB.Misc;
 using Klons3.ModelsF;
+using KlonsLIB.Components;
 
 namespace KlonsF.Forms
 {
@@ -25,8 +26,8 @@ namespace KlonsF.Forms
             CheckMyFontAndColors();
             MakeMoveSeq();
             LoadColumnWidthsFromSettings();
+            cbDocGr.SelectedIndex = -1;
 
-            LinkToData();
             LoadParams();
             FillData();
             CheckColumns();
@@ -395,51 +396,6 @@ namespace KlonsF.Forms
             MyMainForm.ShowReport(rd);
         }
 
-        private void LinkToData()
-        {
-            var ctx = MyData.DbContextF;
-
-            cbClid.DataSource = new BindingSource(ctx.GetBindingListByType<F_PERSONS>(), null);
-            cbAC11.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP21>(), null);
-            cbAC12.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP21>(), null);
-            cbAC21.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP21>(), null);
-            cbAC22.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP21>(), null);
-            cbAC13.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP23>(), null);
-            cbAC23.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP23>(), null);
-            cbAC14.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP24>(), null);
-            cbAC24.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP24>(), null);
-            cbAC15.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP25>(), null);
-            cbAC25.DataSource = new BindingSource(ctx.GetBindingListByType<F_ACP25>(), null);
-            cbDocGr.DataSource = new BindingSource(ctx.GetBindingListByType<F_DOCTYP>(), null);
-
-            (cbClid.DataSource as BindingSource).Sort = "CLID";
-            (cbAC11.DataSource as BindingSource).Sort = "AC";
-            (cbAC12.DataSource as BindingSource).Sort = "AC";
-            (cbAC13.DataSource as BindingSource).Sort = "IDX";
-            (cbAC14.DataSource as BindingSource).Sort = "IDX";
-            (cbAC15.DataSource as BindingSource).Sort = "IDX";
-            (cbAC21.DataSource as BindingSource).Sort = "AC";
-            (cbAC22.DataSource as BindingSource).Sort = "AC";
-            (cbAC23.DataSource as BindingSource).Sort = "IDX";
-            (cbAC24.DataSource as BindingSource).Sort = "IDX";
-            (cbAC25.DataSource as BindingSource).Sort = "IDX";
-            (cbDocGr.DataSource as BindingSource).Sort = "ID";
-
-            cbClid.SelectedIndex = -1;
-            cbAC11.SelectedIndex = -1;
-            cbAC12.SelectedIndex = -1;
-            cbAC21.SelectedIndex = -1;
-            cbAC22.SelectedIndex = -1;
-            cbAC13.SelectedIndex = -1;
-            cbAC23.SelectedIndex = -1;
-            cbAC14.SelectedIndex = -1;
-            cbAC24.SelectedIndex = -1;
-            cbAC15.SelectedIndex = -1;
-            cbAC25.SelectedIndex = -1;
-            cbDocGr.SelectedIndex = -1;
-
-        }
-
         private void MakeMoveSeq()
         {
             SetControlsUpDownOrder(new Control[][]
@@ -454,7 +410,6 @@ namespace KlonsF.Forms
 
         private void FormOpsFilter_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
         }
 
         private void FormOpsFilter_FormClosed(object sender, FormClosedEventArgs e)
@@ -496,11 +451,9 @@ namespace KlonsF.Forms
             switch (e.KeyCode)
             {
                 case Keys.F5:
-                    if (sender is ComboBox)
-                        if (DoOnF5(sender as ComboBox))
-                        {
+                    if (sender is MyPickRowTextBox2 tb2)
+                        if (DoOnF5(tb2))
                             e.Handled = false;
-                        }
                     break;
                 default:
                     e.Handled = false;
@@ -508,7 +461,7 @@ namespace KlonsF.Forms
             }
         }
 
-        private bool DoOnF5(ComboBox sender)
+        private bool DoOnF5(TextBox sender)
         {
             Action<string> act =
                 value =>
@@ -753,6 +706,34 @@ namespace KlonsF.Forms
             rādītPersonasPVNReģistrācijasNumuruToolStripMenuItem.Checked = b;
             MyData.Settings.OpsShowPersonsPVNRegNum = b;
             dgcPVNRegNr.Visible = b;
+        }
+
+        private void CbXXX_ButtonClicked(object sender, EventArgs e)
+        {
+            string cur_value = ((Control)sender).Text;
+            string new_value = null;
+            if (sender == cbAC11 || sender == cbAC12 || sender == cbAC21 || sender == cbAC22)
+            {
+                new_value = Form_AcPlan.GetAcP1(cur_value);
+            }
+            else if (sender == cbAC13 || sender == cbAC23)
+            {
+                new_value = Form_AcP3.GetAcP3(cur_value);
+            }
+            else if (sender == cbAC14 || sender == cbAC24)
+            {
+                new_value = Form_AcP4.GetAcP4(cur_value);
+            }
+            else if (sender == cbAC15 || sender == cbAC25)
+            {
+                new_value = Form_AcPVN.GetAcPVN(cur_value);
+            }
+            else if (sender == cbClid)
+            {
+                new_value = Form_Persons.GetClId(cur_value);
+            }
+            if (new_value.IsNOE()) return;
+            ((Control)sender).Text = new_value;
         }
     }
 }

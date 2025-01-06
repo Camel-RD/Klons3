@@ -6,6 +6,7 @@
     <AssemblyName>DataObjectsA</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Platforms>AnyCPU;x86;x64</Platforms>
+    <NuGetAudit>false</NuGetAudit>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="DO_A\AamatsData.cs" />

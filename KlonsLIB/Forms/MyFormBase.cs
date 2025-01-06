@@ -363,11 +363,23 @@ namespace KlonsLIB.Forms
             if (MyToolStrip != null)
                 ColorThemeHelper.ApplyToControlA(MyToolStrip, cth);
         }
-        
+
+        public float GetFontScaleFactor()
+        {
+            uint dpi = NM.GetDpiForWindow(Handle);
+            float dpi_scaling = dpi / 96.0f;
+            if (dpi_scaling > 1.5f) dpi_scaling = 1.5f;
+            float ret = 1.5f / dpi_scaling;
+            //ret *= 10.0f / DefaultFont.Size;
+            return ret;
+        }
+
         public void CheckMyFontAndColors2()
         {
             SuspendLayout();
-            this.Font = Settings.FormFont;
+            float fontscalefactor = GetFontScaleFactor();
+            float fsz = Settings.FormFont.Size * fontscalefactor;
+            this.Font = new Font(Settings.FormFont.FontFamily, fsz, Settings.FormFont.Style);
             foreach (Control c in GetAllControls(this))
             {
                 if (c is ContainerControl)
@@ -425,6 +437,8 @@ namespace KlonsLIB.Forms
 
         protected void ScaleToolStrips(Form form, SizeF factor)
         {
+            float fontscalefactor = DefaultFont.Size / 10.0f;
+            factor *= fontscalefactor;
             foreach (var c in GetAllControls(form))
             {
                 if (c is ToolStrip tsp && !(c is MenuStrip))
@@ -537,7 +551,7 @@ namespace KlonsLIB.Forms
         {
             if (!visible && control.Focused)
                 ActiveControl = null;
-            control.Enabled = visible;
+            control.Visible = visible;
         }
     }
 }

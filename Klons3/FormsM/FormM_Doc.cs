@@ -15,6 +15,7 @@ using KlonsF.Classes;
 using KlonsLIB.Components;
 using Klons3.ModelsM;
 using KlonsLIB.MySourceGrid.GridRows;
+using System.IO;
 
 namespace KlonsM.FormsM
 {
@@ -231,6 +232,7 @@ namespace KlonsM.FormsM
                 if (dr_item == null) return;
                 if(dr_doc.XDocType == EDocType.Realizācija ||
                     dr_doc.XDocType == EDocType.Sniegti_pakalpojumi ||
+                    dr_doc.XDocType == EDocType.Pārdošanas_rēķins ||
                     dr_doc.XDocType == EDocType.Pārvietots)
                 {
                     dr.PRICE0 = RoundPrice(dr_item.SELLPRICE);
@@ -525,9 +527,14 @@ namespace KlonsM.FormsM
             return FormM_Stores.GetStore(dr_store, storefilter);
         }
 
-        public M_ITEMS GetItemId(M_ITEMS dr_item)
+        public M_ITEMS GetItem(M_ITEMS dr_item)
         {
             return FormM_Items.GetItem(dr_item);
+        }
+
+        public (bool, M_ITEMS_TEXTS) GetItemText(M_ITEMS dr_item, M_ITEMS_TEXTS dr_itemtext)
+        {
+            return FormM_ItemsTexts.GetItemText(dr_item, dr_itemtext);
         }
 
         private bool CanEditDocsCurrentCell()
@@ -599,9 +606,20 @@ namespace KlonsM.FormsM
         {
             if (!CanEditRowsCurrentCell()) return;
             var cv = (M_ITEMS)dgvRows.CurrentCell.Value;
-            var ret = GetItemId(cv);
+            var ret = GetItem(cv);
             if (ret == null) return;
             SetCurrentRowsItemId(ret);
+        }
+
+        public void GetRowItemText()
+        {
+            if (!CanEditRowsCurrentCell()) return;
+            var dr_row = dgvRows.GetCurrentObjectViewItem<M_ROWS>();
+            if (dr_row == null) return;
+            (bool ret, M_ITEMS_TEXTS dr_text) = GetItemText(dr_row.Item, dr_row.ItemText);
+            if (!ret) return;
+            dr_row.ItemText = dr_text;
+            dgvRows.InvalidateCell(dgvRows.CurrentCell);
         }
 
         public void SelectDoc(M_DOCS dr_doc)
@@ -669,10 +687,23 @@ namespace KlonsM.FormsM
 
             if (e.ColumnIndex == dgcRowsItemName.Index)
             {
-                var dr = (M_ITEMS)e.Value;
-                if (dr == null) return;
-                e.Value = dr.NAME;
-                e.FormattingApplied = true;
+                var dr_row = dgvRows.GetObjectViewItem<M_ROWS>(e.RowIndex);
+                if (dr_row == null)
+                {
+                    return;
+                }
+                if (dr_row.ItemText == null)
+                {
+                    var dr = (M_ITEMS)e.Value;
+                    if (dr == null) return;
+                    e.Value = dr.NAME;
+                    e.FormattingApplied = true;
+                }
+                else
+                {
+                    e.Value = dr_row.ItemText.TEXT;
+                    e.FormattingApplied = true;
+                }
             }
             if (e.ColumnIndex == dgcRowsUnits.Index)
             {
@@ -772,6 +803,22 @@ namespace KlonsM.FormsM
                     e.Handled = true;
                     return;
                 }
+                if (colnr == dgcRowsItemName.Index)
+                {
+                    GetRowItemText();
+                    e.Handled = true;
+                    return;
+                }
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                if (!CanEditCurrentDoc()) return;
+                if (colnr == dgcRowsItemName.Index)
+                {
+                    GetRowItemText();
+                    e.Handled = true;
+                    return;
+                }
             }
         }
 
@@ -786,6 +833,11 @@ namespace KlonsM.FormsM
             if (colnr == dgcRowsIdItem.Index)
             {
                 GetRowItem();
+                return;
+            }
+            if (colnr == dgcRowsItemName.Index)
+            {
+                GetRowItemText();
                 return;
             }
         }
@@ -1242,7 +1294,41 @@ namespace KlonsM.FormsM
             CheckSave();
             MyMainForm.ShowInfo("Datu imports pabeigts.", "", this);
         }
+        public void DoMakeEInvoice()
+        {
+            var dr_doc = GetGoodCurrentDocRow();
+            if (dr_doc == null) return;
+            if (dr_doc.Rows.Count == 0)
+            {
+                MyMainForm.ShowWarning("Dokumentam nav izveidoti ieraksti.");
+                return;
+            }
+            var err = DataTasksM.CheckDocHeader(dr_doc);
+            if (err.HasErrors)
+            {
+                FormM_ErrorList.ShowErrorList(this, err);
+                return;
+            }
 
+            FileDialog fd = new SaveFileDialog();
+            var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            fd.InitialDirectory = folder;
+            fd.DefaultExt = "xml";
+            fd.Filter = "XML faili (*.xml)|*.xml";
+            if (fd.ShowDialog(KlonsData.St.MyMainForm) != DialogResult.OK) return;
+            var einvoicedoc = EInvoiceTools.ToEInvoice(dr_doc, true);
+            var xml_text = EInvoiceTools.GetXML(einvoicedoc);
+            try
+            {
+                File.WriteAllText(fd.FileName, xml_text);
+                MyMainForm.ShowInfo("e-Rēķins veiksmīgi saglabāts.");
+            }
+            catch (Exception e)
+            {
+                MyException e1 = new MyException("Neizdevās saglabāt atskaiti.", e);
+                Form_Error.ShowException(KlonsData.St.MyMainForm, e1);
+            }
+        }
         private void sgrDocA_EditStarting(object sender, CancelEventArgs e)
         {
             var dr_doc = GetCurrentDocRow();
@@ -1317,6 +1403,11 @@ namespace KlonsM.FormsM
         private void miImportRows_Click(object sender, EventArgs e)
         {
             DoImportRows();
+        }
+
+        private void miMakeEInvoice_Click(object sender, System.EventArgs e)
+        {
+            DoMakeEInvoice();
         }
     }
 }

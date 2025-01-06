@@ -28,7 +28,6 @@ namespace KlonsF.Forms
 
         private void FormCompanyData_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
         }
 
         private void FormCompanyData_FormClosing(object sender, FormClosingEventArgs e)

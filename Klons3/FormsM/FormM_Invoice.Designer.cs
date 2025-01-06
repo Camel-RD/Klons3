@@ -40,6 +40,8 @@ namespace KlonsM.FormsM
             this.label4 = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.chShowCarrier = new KlonsLIB.Components.MyCheckBox();
+            chShowSignature = new KlonsLIB.Components.MyCheckBox();
+            chShowBarcode = new KlonsLIB.Components.MyCheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +122,8 @@ namespace KlonsM.FormsM
             "PAVADZĪME",
             "RĒĶINS",
             "PRIEKŠAPMAKSAS RĒĶINS",
-            "KREDĪTRĒĶINS"});
+            "KREDĪTRĒĶINS",
+            "PĀRVIETOŠANAS PAVADZĪME"});
             this.cbTitle.Location = new System.Drawing.Point(188, 95);
             this.cbTitle.Name = "cbTitle";
             this.cbTitle.Size = new System.Drawing.Size(359, 28);
@@ -157,12 +160,37 @@ namespace KlonsM.FormsM
             this.chShowCarrier.Text = "Rādīt pārvadātāja datus";
             this.chShowCarrier.UseVisualStyleBackColor = false;
             // 
+            // chShowSignature
+            // 
+            chShowSignature.AutoSize = true;
+            chShowSignature.Checked = true;
+            chShowSignature.CheckState = System.Windows.Forms.CheckState.Checked;
+            chShowSignature.Location = new System.Drawing.Point(195, 139);
+            chShowSignature.Name = "chShowSignature";
+            chShowSignature.Size = new System.Drawing.Size(155, 18);
+            chShowSignature.TabIndex = 4;
+            chShowSignature.Text = "Rādīt parakstu laukus";
+            chShowSignature.UseVisualStyleBackColor = false;
+            // 
+            // chShowBarcode
+            // 
+            chShowBarcode.AutoSize = true;
+            chShowBarcode.Checked = true;
+            chShowBarcode.CheckState = System.Windows.Forms.CheckState.Checked;
+            chShowBarcode.Location = new System.Drawing.Point(367, 139);
+            chShowBarcode.Name = "chShowBarcode";
+            chShowBarcode.Size = new System.Drawing.Size(143, 18);
+            chShowBarcode.TabIndex = 5;
+            chShowBarcode.Text = "Rādīt artikula kodus";
+            chShowBarcode.UseVisualStyleBackColor = false;            // 
             // FormM_Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 337);
             this.Controls.Add(this.chShowCarrier);
+            Controls.Add(chShowSignature);
+            Controls.Add(chShowCarrier);
             this.Controls.Add(this.cbTitle);
             this.Controls.Add(this.lbInvoiceForm);
             this.Controls.Add(this.tbSigner);
@@ -195,5 +223,7 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btCancel;
         private KlonsLIB.Components.MyCheckBox chShowCarrier;
+        private KlonsLIB.Components.MyCheckBox chShowSignature;
+        private KlonsLIB.Components.MyCheckBox chShowBarcode;
     }
 }

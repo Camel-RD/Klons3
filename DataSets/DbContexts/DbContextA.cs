@@ -230,6 +230,9 @@ public partial class DbContextA : MyDbContext
                 .HasForeignKey(d => d.DEP)
                 .OnDelete(DeleteBehavior.ClientNoAction)
                 .HasConstraintName("FK_A_PAYLISTS_DEP");
+
+            entity.Ignore(x => x.XTpPay);
+
             entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
         });
 
@@ -254,6 +257,7 @@ public partial class DbContextA : MyDbContext
                 .HasForeignKey(d => d.IDS)
                 .OnDelete(DeleteBehavior.ClientCascade)
                 .HasConstraintName("FK_A_PAYLISTS_R_IDS");
+
             entity.Property(e => e.TS).HasColumnName("TS").IsRowVersion().HasDefaultValueSql("localtimestamp");
         });
 

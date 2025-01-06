@@ -28,527 +28,491 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbRegNr = new KlonsLIB.Components.MyTextBox();
-            this.bsItem = new KlonsLIB.Data.MyBindingSourceToObj(this.components);
-            this.itemsEventsData1 = new DataObjectsP.ItemsEventsData();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbName = new KlonsLIB.Components.MyTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbDate = new KlonsLIB.Components.MyTextBox();
-            this.chAddEvent = new KlonsLIB.Components.MyCheckBox();
-            this.cbCat1 = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsCat1 = new KlonsLIB.Data.MyBindingSourceEf(this.components);
-            this.cbCatD = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsCatD = new KlonsLIB.Data.MyBindingSourceEf(this.components);
-            this.cbCatT = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsCatT = new KlonsLIB.Data.MyBindingSourceEf(this.components);
-            this.cbDep = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsDep = new KlonsLIB.Data.MyBindingSourceEf(this.components);
-            this.cbPlace = new KlonsLIB.Components.MyMcFlatComboBox();
-            this.bsPlace = new KlonsLIB.Data.MyBindingSourceEf(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbValue = new KlonsLIB.Components.MyTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbDocNr = new KlonsLIB.Components.MyTextBox();
-            this.cmOK = new System.Windows.Forms.Button();
-            this.cmCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bsItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCat1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCatD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCatT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsDep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPlace)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            label1 = new System.Windows.Forms.Label();
+            tbRegNr = new KlonsLIB.Components.MyTextBox();
+            bsItem = new KlonsLIB.Data.MyBindingSourceToObj(components);
+            itemsEventsData1 = new DataObjectsP.ItemsEventsData();
+            label2 = new System.Windows.Forms.Label();
+            tbName = new KlonsLIB.Components.MyTextBox();
+            label3 = new System.Windows.Forms.Label();
+            tbDate = new KlonsLIB.Components.MyTextBox();
+            chAddEvent = new KlonsLIB.Components.MyCheckBox();
+            cbCat1 = new KlonsLIB.Components.MyMcFlatComboBox();
+            bsCat1 = new KlonsLIB.Data.MyBindingSourceEf(components);
+            cbCatD = new KlonsLIB.Components.MyMcFlatComboBox();
+            bsCatD = new KlonsLIB.Data.MyBindingSourceEf(components);
+            cbCatT = new KlonsLIB.Components.MyMcFlatComboBox();
+            bsCatT = new KlonsLIB.Data.MyBindingSourceEf(components);
+            cbDep = new KlonsLIB.Components.MyMcFlatComboBox();
+            bsDep = new KlonsLIB.Data.MyBindingSourceEf(components);
+            cbPlace = new KlonsLIB.Components.MyMcFlatComboBox();
+            bsPlace = new KlonsLIB.Data.MyBindingSourceEf(components);
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            tbValue = new KlonsLIB.Components.MyTextBox();
+            label10 = new System.Windows.Forms.Label();
+            tbDocNr = new KlonsLIB.Components.MyTextBox();
+            cmOK = new System.Windows.Forms.Button();
+            cmCancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)bsItem).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCat1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCatD).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCatT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsDep).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsPlace).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Reģ.nr.:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(14, 11);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(59, 17);
+            label1.TabIndex = 13;
+            label1.Text = "Reģ.nr.:";
             // 
             // tbRegNr
             // 
-            this.tbRegNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbRegNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsItem, "fITEM_REG_NR", true));
-            this.tbRegNr.Location = new System.Drawing.Point(152, 9);
-            this.tbRegNr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbRegNr.MaxLength = 20;
-            this.tbRegNr.Name = "tbRegNr";
-            this.tbRegNr.Size = new System.Drawing.Size(90, 26);
-            this.tbRegNr.TabIndex = 0;
-            this.tbRegNr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            tbRegNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbRegNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", bsItem, "fITEM_REG_NR", true));
+            tbRegNr.Location = new System.Drawing.Point(152, 9);
+            tbRegNr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbRegNr.MaxLength = 20;
+            tbRegNr.Name = "tbRegNr";
+            tbRegNr.Size = new System.Drawing.Size(90, 23);
+            tbRegNr.TabIndex = 0;
+            tbRegNr.KeyDown += control_KeyDown;
             // 
             // bsItem
             // 
-            this.bsItem.MyDataSource = this.itemsEventsData1;
-            this.bsItem.Position = 0;
+            bsItem.MyDataSource = itemsEventsData1;
+            bsItem.Position = 0;
             // 
             // itemsEventsData1
             // 
-            this.itemsEventsData1.fCAT1 = 0;
-            this.itemsEventsData1.fCATD = 0;
-            this.itemsEventsData1.fCATT = 0;
-            this.itemsEventsData1.fDEPARTMENT = 0;
-            this.itemsEventsData1.fDEPREC_0 = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fDEPREC_C = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fDESCR = "";
-            this.itemsEventsData1.fDOCNR = "";
-            this.itemsEventsData1.fDT = new System.DateTime(((long)(0)));
-            this.itemsEventsData1.fDTREG = new System.DateTime(((long)(0)));
-            this.itemsEventsData1.fEVENT = 0;
-            this.itemsEventsData1.fID = 0;
-            this.itemsEventsData1.fIDIT = 0;
-            this.itemsEventsData1.fITEM_DATE1 = null;
-            this.itemsEventsData1.fITEM_DATE2 = null;
-            this.itemsEventsData1.fITEM_NAME = null;
-            this.itemsEventsData1.fITEM_REG_NR = null;
-            this.itemsEventsData1.fMT_TOTAL = 0;
-            this.itemsEventsData1.fMT_USED = 0;
-            this.itemsEventsData1.fPLACE = 0;
-            this.itemsEventsData1.fRATE_D = 0F;
-            this.itemsEventsData1.fRATE_D_MT = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fSELL_VALUE = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fSNR = 0;
-            this.itemsEventsData1.fTAX_EACH = 0;
-            this.itemsEventsData1.fTAX_RATE = 0F;
-            this.itemsEventsData1.fTAX_VAL = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fTAX_VAL_C = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fTAX_VAL_LEFT = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fVALUE_0 = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fVALUE_C = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fVALUE_LEFT = new decimal(new int[] {
-            0,
-            0,
-            0,
-            65536});
-            this.itemsEventsData1.fZDT = null;
-            this.itemsEventsData1.fZU = null;
+            itemsEventsData1.fCAT1 = 0;
+            itemsEventsData1.fCATD = 0;
+            itemsEventsData1.fCATT = 0;
+            itemsEventsData1.fDEPARTMENT = 0;
+            itemsEventsData1.fDEPREC_0 = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fDEPREC_C = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fDESCR = "";
+            itemsEventsData1.fDOCNR = "";
+            itemsEventsData1.fDT = new System.DateTime(0L);
+            itemsEventsData1.fDTREG = new System.DateTime(0L);
+            itemsEventsData1.fEVENT = 0;
+            itemsEventsData1.fID = 0;
+            itemsEventsData1.fIDIT = 0;
+            itemsEventsData1.fITEM_DATE1 = null;
+            itemsEventsData1.fITEM_DATE2 = null;
+            itemsEventsData1.fITEM_NAME = null;
+            itemsEventsData1.fITEM_REG_NR = null;
+            itemsEventsData1.fMT_TOTAL = 0;
+            itemsEventsData1.fMT_USED = 0;
+            itemsEventsData1.fPLACE = 0;
+            itemsEventsData1.fRATE_D = 0F;
+            itemsEventsData1.fRATE_D_MT = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fSELL_VALUE = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fSNR = 0;
+            itemsEventsData1.fTAX_EACH = 0;
+            itemsEventsData1.fTAX_RATE = 0F;
+            itemsEventsData1.fTAX_VAL = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fTAX_VAL_C = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fTAX_VAL_LEFT = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fVALUE_0 = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fVALUE_C = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fVALUE_LEFT = new decimal(new int[] { 0, 0, 0, 65536 });
+            itemsEventsData1.fZDT = null;
+            itemsEventsData1.fZU = null;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Nosaukums:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(14, 41);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(86, 17);
+            label2.TabIndex = 14;
+            label2.Text = "Nosaukums:";
             // 
             // tbName
             // 
-            this.tbName.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsItem, "fITEM_NAME", true));
-            this.tbName.Location = new System.Drawing.Point(152, 46);
-            this.tbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbName.MaxLength = 150;
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(279, 26);
-            this.tbName.TabIndex = 1;
-            this.tbName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            tbName.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbName.DataBindings.Add(new System.Windows.Forms.Binding("Text", bsItem, "fITEM_NAME", true));
+            tbName.Location = new System.Drawing.Point(152, 38);
+            tbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbName.MaxLength = 150;
+            tbName.Name = "tbName";
+            tbName.Size = new System.Drawing.Size(279, 23);
+            tbName.TabIndex = 1;
+            tbName.KeyDown += control_KeyDown;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Iegādes datums:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(14, 107);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(112, 17);
+            label3.TabIndex = 15;
+            label3.Text = "Iegādes datums:";
             // 
             // tbDate
             // 
-            this.tbDate.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsItem, "fDT", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "dd.MM.yyyy"));
-            this.tbDate.IsDate = true;
-            this.tbDate.Location = new System.Drawing.Point(152, 126);
-            this.tbDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(90, 26);
-            this.tbDate.TabIndex = 2;
-            this.tbDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            tbDate.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", bsItem, "fDT", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "dd.MM.yyyy"));
+            tbDate.IsDate = true;
+            tbDate.Location = new System.Drawing.Point(137, 104);
+            tbDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbDate.Name = "tbDate";
+            tbDate.Size = new System.Drawing.Size(90, 23);
+            tbDate.TabIndex = 2;
+            tbDate.KeyDown += control_KeyDown;
             // 
             // chAddEvent
             // 
-            this.chAddEvent.AutoSize = true;
-            this.chAddEvent.Checked = true;
-            this.chAddEvent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chAddEvent.Location = new System.Drawing.Point(14, 94);
-            this.chAddEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chAddEvent.Name = "chAddEvent";
-            this.chAddEvent.Size = new System.Drawing.Size(420, 24);
-            this.chAddEvent.TabIndex = 12;
-            this.chAddEvent.Text = "Izveidot iegādes un nodošanas ekspluatācijā notikumu";
-            this.chAddEvent.UseVisualStyleBackColor = true;
-            this.chAddEvent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            chAddEvent.AutoSize = true;
+            chAddEvent.Checked = true;
+            chAddEvent.CheckState = System.Windows.Forms.CheckState.Checked;
+            chAddEvent.Location = new System.Drawing.Point(14, 72);
+            chAddEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            chAddEvent.Name = "chAddEvent";
+            chAddEvent.Size = new System.Drawing.Size(355, 18);
+            chAddEvent.TabIndex = 12;
+            chAddEvent.Text = "Izveidot iegādes un nodošanas ekspluatācijā notikumu";
+            chAddEvent.UseVisualStyleBackColor = true;
+            chAddEvent.KeyDown += control_KeyDown;
             // 
             // cbCat1
             // 
-            this.cbCat1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbCat1.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.cbCat1.ColumnWidths = "100;300";
-            this.cbCat1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsItem, "fCAT1", true));
-            this.cbCat1.DataSource = this.bsCat1;
-            this.cbCat1.DisplayMember = "CODE";
-            this.cbCat1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCat1.DropDownHeight = 315;
-            this.cbCat1.DropDownWidth = 481;
-            this.cbCat1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCat1.FormattingEnabled = false;
-            this.cbCat1.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbCat1.GridLineHorizontal = false;
-            this.cbCat1.GridLineVertical = false;
-            this.cbCat1.IntegralHeight = false;
-            this.cbCat1.Location = new System.Drawing.Point(515, 130);
-            this.cbCat1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbCat1.MaxDropDownItems = 15;
-            this.cbCat1.Name = "cbCat1";
-            this.cbCat1.Size = new System.Drawing.Size(136, 27);
-            this.cbCat1.TabIndex = 5;
-            this.cbCat1.ValueMember = "ID";
-            this.cbCat1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cbCat1.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbCat1.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            cbCat1.ColumnWidths = "100;300";
+            cbCat1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", bsItem, "fCAT1", true));
+            cbCat1.DataSource = bsCat1;
+            cbCat1.DisplayMember = "CODE";
+            cbCat1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbCat1.DropDownHeight = 270;
+            cbCat1.DropDownWidth = 419;
+            cbCat1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbCat1.GridLineColor = System.Drawing.Color.LightGray;
+            cbCat1.GridLineHorizontal = false;
+            cbCat1.GridLineVertical = false;
+            cbCat1.IntegralHeight = false;
+            cbCat1.Location = new System.Drawing.Point(480, 108);
+            cbCat1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbCat1.MaxDropDownItems = 15;
+            cbCat1.Name = "cbCat1";
+            cbCat1.Size = new System.Drawing.Size(136, 24);
+            cbCat1.TabIndex = 5;
+            cbCat1.ValueMember = "ID";
+            cbCat1.KeyDown += control_KeyDown;
             // 
             // bsCat1
             // 
-            this.bsCat1.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CAT1");
-            this.bsCat1.Sort = "CODE";
+            bsCat1.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CAT1");
+            bsCat1.Sort = "CODE";
             // 
             // cbCatD
             // 
-            this.cbCatD.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbCatD.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.cbCatD.ColumnWidths = "100;300";
-            this.cbCatD.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsItem, "fCATD", true));
-            this.cbCatD.DataSource = this.bsCatD;
-            this.cbCatD.DisplayMember = "CODE";
-            this.cbCatD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCatD.DropDownHeight = 315;
-            this.cbCatD.DropDownWidth = 481;
-            this.cbCatD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCatD.FormattingEnabled = false;
-            this.cbCatD.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbCatD.GridLineHorizontal = false;
-            this.cbCatD.GridLineVertical = false;
-            this.cbCatD.IntegralHeight = false;
-            this.cbCatD.Location = new System.Drawing.Point(515, 168);
-            this.cbCatD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbCatD.MaxDropDownItems = 15;
-            this.cbCatD.Name = "cbCatD";
-            this.cbCatD.Size = new System.Drawing.Size(136, 27);
-            this.cbCatD.TabIndex = 6;
-            this.cbCatD.ValueMember = "ID";
-            this.cbCatD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cbCatD.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbCatD.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            cbCatD.ColumnWidths = "100;300";
+            cbCatD.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", bsItem, "fCATD", true));
+            cbCatD.DataSource = bsCatD;
+            cbCatD.DisplayMember = "CODE";
+            cbCatD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbCatD.DropDownHeight = 270;
+            cbCatD.DropDownWidth = 419;
+            cbCatD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbCatD.GridLineColor = System.Drawing.Color.LightGray;
+            cbCatD.GridLineHorizontal = false;
+            cbCatD.GridLineVertical = false;
+            cbCatD.IntegralHeight = false;
+            cbCatD.Location = new System.Drawing.Point(480, 138);
+            cbCatD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbCatD.MaxDropDownItems = 15;
+            cbCatD.Name = "cbCatD";
+            cbCatD.Size = new System.Drawing.Size(136, 24);
+            cbCatD.TabIndex = 6;
+            cbCatD.ValueMember = "ID";
+            cbCatD.KeyDown += control_KeyDown;
             // 
             // bsCatD
             // 
-            this.bsCatD.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CATD");
-            this.bsCatD.Sort = "CODE";
+            bsCatD.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CATD");
+            bsCatD.Sort = "CODE";
             // 
             // cbCatT
             // 
-            this.cbCatT.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbCatT.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.cbCatT.ColumnWidths = "100;300";
-            this.cbCatT.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsItem, "fCATT", true));
-            this.cbCatT.DataSource = this.bsCatT;
-            this.cbCatT.DisplayMember = "CODE";
-            this.cbCatT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCatT.DropDownHeight = 315;
-            this.cbCatT.DropDownWidth = 481;
-            this.cbCatT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCatT.FormattingEnabled = false;
-            this.cbCatT.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbCatT.GridLineHorizontal = false;
-            this.cbCatT.GridLineVertical = false;
-            this.cbCatT.IntegralHeight = false;
-            this.cbCatT.Location = new System.Drawing.Point(515, 205);
-            this.cbCatT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbCatT.MaxDropDownItems = 15;
-            this.cbCatT.Name = "cbCatT";
-            this.cbCatT.Size = new System.Drawing.Size(136, 27);
-            this.cbCatT.TabIndex = 7;
-            this.cbCatT.ValueMember = "ID";
-            this.cbCatT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cbCatT.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbCatT.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            cbCatT.ColumnWidths = "100;300";
+            cbCatT.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", bsItem, "fCATT", true));
+            cbCatT.DataSource = bsCatT;
+            cbCatT.DisplayMember = "CODE";
+            cbCatT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbCatT.DropDownHeight = 270;
+            cbCatT.DropDownWidth = 419;
+            cbCatT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbCatT.GridLineColor = System.Drawing.Color.LightGray;
+            cbCatT.GridLineHorizontal = false;
+            cbCatT.GridLineVertical = false;
+            cbCatT.IntegralHeight = false;
+            cbCatT.Location = new System.Drawing.Point(480, 167);
+            cbCatT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbCatT.MaxDropDownItems = 15;
+            cbCatT.Name = "cbCatT";
+            cbCatT.Size = new System.Drawing.Size(136, 24);
+            cbCatT.TabIndex = 7;
+            cbCatT.ValueMember = "ID";
+            cbCatT.KeyDown += control_KeyDown;
             // 
             // bsCatT
             // 
-            this.bsCatT.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CATT");
-            this.bsCatT.Sort = "CODE";
+            bsCatT.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_CATT");
+            bsCatT.Sort = "CODE";
             // 
             // cbDep
             // 
-            this.cbDep.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbDep.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.cbDep.ColumnWidths = "100;300";
-            this.cbDep.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsItem, "fDEPARTMENT", true));
-            this.cbDep.DataSource = this.bsDep;
-            this.cbDep.DisplayMember = "CODE";
-            this.cbDep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDep.DropDownHeight = 315;
-            this.cbDep.DropDownWidth = 481;
-            this.cbDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbDep.FormattingEnabled = false;
-            this.cbDep.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbDep.GridLineHorizontal = false;
-            this.cbDep.GridLineVertical = false;
-            this.cbDep.IntegralHeight = false;
-            this.cbDep.Location = new System.Drawing.Point(515, 242);
-            this.cbDep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbDep.MaxDropDownItems = 15;
-            this.cbDep.Name = "cbDep";
-            this.cbDep.Size = new System.Drawing.Size(136, 27);
-            this.cbDep.TabIndex = 8;
-            this.cbDep.ValueMember = "ID";
-            this.cbDep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cbDep.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbDep.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            cbDep.ColumnWidths = "100;300";
+            cbDep.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", bsItem, "fDEPARTMENT", true));
+            cbDep.DataSource = bsDep;
+            cbDep.DisplayMember = "CODE";
+            cbDep.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbDep.DropDownHeight = 270;
+            cbDep.DropDownWidth = 419;
+            cbDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbDep.GridLineColor = System.Drawing.Color.LightGray;
+            cbDep.GridLineHorizontal = false;
+            cbDep.GridLineVertical = false;
+            cbDep.IntegralHeight = false;
+            cbDep.Location = new System.Drawing.Point(480, 196);
+            cbDep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbDep.MaxDropDownItems = 15;
+            cbDep.Name = "cbDep";
+            cbDep.Size = new System.Drawing.Size(136, 24);
+            cbDep.TabIndex = 8;
+            cbDep.ValueMember = "ID";
+            cbDep.KeyDown += control_KeyDown;
             // 
             // bsDep
             // 
-            this.bsDep.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_DEPARTMENTS");
-            this.bsDep.Sort = "CODE";
+            bsDep.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_DEPARTMENTS");
+            bsDep.Sort = "CODE";
             // 
             // cbPlace
             // 
-            this.cbPlace.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cbPlace.ColumnNames = new string[] {
-        "CODE",
-        "DESCR"};
-            this.cbPlace.ColumnWidths = "100;300";
-            this.cbPlace.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bsItem, "fPLACE", true));
-            this.cbPlace.DataSource = this.bsPlace;
-            this.cbPlace.DisplayMember = "CODE";
-            this.cbPlace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPlace.DropDownHeight = 315;
-            this.cbPlace.DropDownWidth = 481;
-            this.cbPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbPlace.FormattingEnabled = false;
-            this.cbPlace.GridLineColor = System.Drawing.Color.LightGray;
-            this.cbPlace.GridLineHorizontal = false;
-            this.cbPlace.GridLineVertical = false;
-            this.cbPlace.IntegralHeight = false;
-            this.cbPlace.Location = new System.Drawing.Point(515, 280);
-            this.cbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbPlace.MaxDropDownItems = 15;
-            this.cbPlace.Name = "cbPlace";
-            this.cbPlace.Size = new System.Drawing.Size(136, 27);
-            this.cbPlace.TabIndex = 9;
-            this.cbPlace.ValueMember = "ID";
-            this.cbPlace.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cbPlace.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            cbPlace.ColumnNames = new string[]
+    {
+    "CODE",
+    "DESCR"
+    };
+            cbPlace.ColumnWidths = "100;300";
+            cbPlace.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", bsItem, "fPLACE", true));
+            cbPlace.DataSource = bsPlace;
+            cbPlace.DisplayMember = "CODE";
+            cbPlace.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            cbPlace.DropDownHeight = 270;
+            cbPlace.DropDownWidth = 419;
+            cbPlace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            cbPlace.GridLineColor = System.Drawing.Color.LightGray;
+            cbPlace.GridLineHorizontal = false;
+            cbPlace.GridLineVertical = false;
+            cbPlace.IntegralHeight = false;
+            cbPlace.Location = new System.Drawing.Point(480, 226);
+            cbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cbPlace.MaxDropDownItems = 15;
+            cbPlace.Name = "cbPlace";
+            cbPlace.Size = new System.Drawing.Size(136, 24);
+            cbPlace.TabIndex = 9;
+            cbPlace.ValueMember = "ID";
+            cbPlace.KeyDown += control_KeyDown;
             // 
             // bsPlace
             // 
-            this.bsPlace.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_PLACES");
-            this.bsPlace.Sort = "CODE";
+            bsPlace.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsPData", "P_PLACES");
+            bsPlace.Sort = "CODE";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(350, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Kategorija:";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(333, 112);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(76, 17);
+            label4.TabIndex = 18;
+            label4.Text = "Kategorija:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(350, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Nolietojuma kat.:";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(333, 141);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(113, 17);
+            label5.TabIndex = 19;
+            label5.Text = "Nolietojuma kat.:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(350, 209);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Noliet. kat. nod. vaj.:";
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(333, 171);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(137, 17);
+            label6.TabIndex = 20;
+            label6.Text = "Noliet. kat. nod. vaj.:";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(350, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 20);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "Struktūrvienība";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(333, 200);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(103, 17);
+            label7.TabIndex = 21;
+            label7.Text = "Struktūrvienība";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(350, 284);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 20);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Atrašanās vieta:";
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(333, 230);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(110, 17);
+            label8.TabIndex = 22;
+            label8.Text = "Atrašanās vieta:";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 165);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Vērtība:";
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(14, 135);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(57, 17);
+            label9.TabIndex = 16;
+            label9.Text = "Vērtība:";
             // 
             // tbValue
             // 
-            this.tbValue.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsItem, "fVALUE_0", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.tbValue.Location = new System.Drawing.Point(152, 162);
-            this.tbValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbValue.Name = "tbValue";
-            this.tbValue.Size = new System.Drawing.Size(90, 26);
-            this.tbValue.TabIndex = 3;
-            this.tbValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            tbValue.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbValue.DataBindings.Add(new System.Windows.Forms.Binding("Text", bsItem, "fVALUE_0", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
+            tbValue.Location = new System.Drawing.Point(137, 132);
+            tbValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbValue.Name = "tbValue";
+            tbValue.Size = new System.Drawing.Size(90, 23);
+            tbValue.TabIndex = 3;
+            tbValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            tbValue.KeyDown += control_KeyDown;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 201);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 20);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Dokumenta nr.:";
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(14, 163);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(105, 17);
+            label10.TabIndex = 17;
+            label10.Text = "Dokumenta nr.:";
             // 
             // tbDocNr
             // 
-            this.tbDocNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tbDocNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsItem, "fDOCNR", true));
-            this.tbDocNr.Location = new System.Drawing.Point(152, 199);
-            this.tbDocNr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbDocNr.MaxLength = 50;
-            this.tbDocNr.Name = "tbDocNr";
-            this.tbDocNr.Size = new System.Drawing.Size(175, 26);
-            this.tbDocNr.TabIndex = 4;
-            this.tbDocNr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            tbDocNr.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            tbDocNr.DataBindings.Add(new System.Windows.Forms.Binding("Text", bsItem, "fDOCNR", true));
+            tbDocNr.Location = new System.Drawing.Point(137, 161);
+            tbDocNr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tbDocNr.MaxLength = 50;
+            tbDocNr.Name = "tbDocNr";
+            tbDocNr.Size = new System.Drawing.Size(175, 23);
+            tbDocNr.TabIndex = 4;
+            tbDocNr.KeyDown += control_KeyDown;
             // 
             // cmOK
             // 
-            this.cmOK.Location = new System.Drawing.Point(21, 314);
-            this.cmOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmOK.Name = "cmOK";
-            this.cmOK.Size = new System.Drawing.Size(101, 41);
-            this.cmOK.TabIndex = 10;
-            this.cmOK.Text = "OK";
-            this.cmOK.UseVisualStyleBackColor = true;
-            this.cmOK.Click += new System.EventHandler(this.cmOK_Click);
-            this.cmOK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cmOK.Location = new System.Drawing.Point(21, 263);
+            cmOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cmOK.Name = "cmOK";
+            cmOK.Size = new System.Drawing.Size(101, 41);
+            cmOK.TabIndex = 10;
+            cmOK.Text = "OK";
+            cmOK.UseVisualStyleBackColor = true;
+            cmOK.Click += cmOK_Click;
+            cmOK.KeyDown += control_KeyDown;
             // 
             // cmCancel
             // 
-            this.cmCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmCancel.Location = new System.Drawing.Point(141, 314);
-            this.cmCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmCancel.Name = "cmCancel";
-            this.cmCancel.Size = new System.Drawing.Size(101, 41);
-            this.cmCancel.TabIndex = 11;
-            this.cmCancel.Text = "Atcelt";
-            this.cmCancel.UseVisualStyleBackColor = true;
-            this.cmCancel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
+            cmCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            cmCancel.Location = new System.Drawing.Point(141, 263);
+            cmCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cmCancel.Name = "cmCancel";
+            cmCancel.Size = new System.Drawing.Size(101, 41);
+            cmCancel.TabIndex = 11;
+            cmCancel.Text = "Atcelt";
+            cmCancel.UseVisualStyleBackColor = true;
+            cmCancel.KeyDown += control_KeyDown;
             // 
-            // Form_Items_New
+            // FormP_Items_New
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.cmCancel;
-            this.ClientSize = new System.Drawing.Size(664, 368);
-            this.Controls.Add(this.cmCancel);
-            this.Controls.Add(this.cmOK);
-            this.Controls.Add(this.cbPlace);
-            this.Controls.Add(this.cbDep);
-            this.Controls.Add(this.cbCatT);
-            this.Controls.Add(this.cbCatD);
-            this.Controls.Add(this.cbCat1);
-            this.Controls.Add(this.chAddEvent);
-            this.Controls.Add(this.tbDocNr);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.tbValue);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.tbDate);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbRegNr);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form_Items_New";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Jauns pamatlīdzeklis";
-            this.Load += new System.EventHandler(this.Form_Items_New_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.control_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.bsItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCat1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCatD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCatT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsDep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsPlace)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            CancelButton = cmCancel;
+            ClientSize = new System.Drawing.Size(627, 310);
+            Controls.Add(cmCancel);
+            Controls.Add(cmOK);
+            Controls.Add(cbPlace);
+            Controls.Add(cbDep);
+            Controls.Add(cbCatT);
+            Controls.Add(cbCatD);
+            Controls.Add(cbCat1);
+            Controls.Add(chAddEvent);
+            Controls.Add(tbDocNr);
+            Controls.Add(label10);
+            Controls.Add(tbValue);
+            Controls.Add(label9);
+            Controls.Add(tbDate);
+            Controls.Add(label3);
+            Controls.Add(tbName);
+            Controls.Add(label2);
+            Controls.Add(tbRegNr);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormP_Items_New";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            Text = "Jauns pamatlīdzeklis";
+            Load += Form_Items_New_Load;
+            KeyDown += control_KeyDown;
+            ((System.ComponentModel.ISupportInitialize)bsItem).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCat1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCatD).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCatT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsDep).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsPlace).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

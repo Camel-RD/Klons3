@@ -34,8 +34,6 @@ namespace KlonsF.Forms
 
         private void Form_LogDiff_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-
         }
 
         DateTime Dt1, Dt2, Dt3;

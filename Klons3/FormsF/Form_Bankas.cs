@@ -24,7 +24,6 @@ namespace KlonsF.Forms
         private void Form_Bankas_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void bnavBanks_ItemDeleting(object sender, CancelEventArgs e)

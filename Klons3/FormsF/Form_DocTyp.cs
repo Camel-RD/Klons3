@@ -32,7 +32,6 @@ namespace KlonsF.Forms
             //this.bsDocTypA.CurrentChanged += new System.EventHandler(this.bsDocTypA_CurrentChanged);
             //ChecChildGrid();
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void FormDocTyp_Shown(object sender, EventArgs e)
@@ -125,8 +124,8 @@ namespace KlonsF.Forms
 
         private void dgvDocTypA_CurrentCellChanged(object sender, EventArgs e)
         {
-            dgvDocTypB.Enabled = !(dgvDocTypA.CurrentRow == null ||
-                dgvDocTypA.RowCount == 1 || dgvDocTypA.CurrentRow.IsNewRow);
+            SetControlEnabled(dgvDocTypB, !(dgvDocTypA.CurrentRow == null ||
+                dgvDocTypA.RowCount == 1 || dgvDocTypA.CurrentRow.IsNewRow));
             dgcDocTypAId.ReadOnly = dgvDocTypA.CurrentRow == null || !dgvDocTypA.CurrentRow.IsNewRow;
         }
 
@@ -266,7 +265,7 @@ namespace KlonsF.Forms
                 )
             {
                 bsDocTypB.DataSource = null;
-                dgvDocTypB.Enabled = false;
+                SetControlEnabled(dgvDocTypB, false);
             }
             else
             {

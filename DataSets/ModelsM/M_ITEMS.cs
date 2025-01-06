@@ -25,9 +25,10 @@ public partial class M_ITEMS : EntityBase
     public DateTime? LASTBUYDATE { get; set; }
     public DateTime TS { get; set; }
     public virtual M_ITEMS_CAT Category { get; set; }
-    public virtual ObservableListSource<M_DISC_LISTS_R> M_DISC_LISTS_R { get; set; } = new ObservableListSource<M_DISC_LISTS_R>();
-    public virtual ObservableListSource<M_ITEMS_PER_STORE> ItemsPerStore { get; set; } = new ObservableListSource<M_ITEMS_PER_STORE>();
-    public virtual ObservableListSource<M_PRICE_LISTS_R> M_PRICE_LISTS_R { get; set; } = new ObservableListSource<M_PRICE_LISTS_R>();
+    public virtual ObservableListSource<M_DISC_LISTS_R> M_DISC_LISTS_R { get; set; } = new();
+    public virtual ObservableListSource<M_ITEMS_PER_STORE> ItemsPerStore { get; set; } = new();
+    public virtual ObservableListSource<M_PRICE_LISTS_R> M_PRICE_LISTS_R { get; set; } = new();
+    public virtual ObservableListViewSource<M_ITEMS_TEXTS> ItemTexts { get; set; } = new();
 
 
     public virtual M_PVNRATES PVNRateRow { get; set; }

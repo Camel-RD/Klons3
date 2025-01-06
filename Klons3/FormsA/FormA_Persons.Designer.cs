@@ -222,7 +222,7 @@ namespace KlonsA.Forms
             bnavNav.CountItemFormat = " no {0}";
             bnavNav.DeleteItem = null;
             bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            bnavNav.ImageScalingSize = new System.Drawing.Size(23, 26);
+            bnavNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tslLabel, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavNav.Location = new System.Drawing.Point(0, 497);
             bnavNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -385,7 +385,7 @@ namespace KlonsA.Forms
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(23, 26);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, toolStripLabel2 });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";

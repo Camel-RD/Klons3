@@ -31,7 +31,6 @@ namespace KlonsF.Forms
 
         private void Form_LogDoc_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
             ActiveControl = dgvDocs;
         }
 

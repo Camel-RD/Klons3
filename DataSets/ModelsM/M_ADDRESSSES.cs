@@ -11,6 +11,14 @@ public partial class M_ADDRESSSES : EntityBase
     public int? IDCOUNTRY { get; set; }
     public string NAME { get; set; } = "?";
     public string ADDRESS { get; set; } = "?";
+    public string STREET { get; set; }
+    public string CITY { get; set; }
+    public string STATE { get; set; }
+    public string PARISH { get; set; }
+    public string POSTALCODE { get; set; }
+    public string COMMENTS { get; set; }
+
+
     public DateTime TS { get; set; }
     public virtual M_COUNTRIES Country { get; set; }
     public virtual M_STORES Store { get; set; }

@@ -247,8 +247,7 @@ namespace KlonsA.Forms
 
         private void CheckEnableGrid()
         {
-            var enabled = bsShL.Count > 0 && 
-                dgvShL.CurrentRow != null && 
+            var enabled = bsShL.Count > 0 && dgvShL.CurrentRow != null && 
                 !dgvShL.CurrentRow.IsNewRow;
             SetControlEnabled(dgvShR, enabled);
         }

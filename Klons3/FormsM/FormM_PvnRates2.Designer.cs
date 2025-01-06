@@ -214,7 +214,7 @@ namespace KlonsM.FormsM
             this.bNav.CountItemFormat = " no {0}";
             this.bNav.DeleteItem = null;
             this.bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbActiveGrid,
             this.bindingNavigatorMoveFirstItem,
@@ -365,7 +365,6 @@ namespace KlonsM.FormsM
             this.myGrid1.ColumnWidth1 = 20;
             this.myGrid1.ColumnWidth2 = 180;
             this.myGrid1.ColumnWidth3 = 260;
-            this.myGrid1.DefaultHeight = 22;
             this.myGrid1.Dock = System.Windows.Forms.DockStyle.Right;
             this.myGrid1.EnableSort = true;
             this.myGrid1.Location = new System.Drawing.Point(548, 0);

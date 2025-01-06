@@ -181,7 +181,6 @@ namespace KlonsF.Forms
             };
 
             SetControlsUpDownOrder(cc);
-            WindowState = FormWindowState.Maximized;
         }
 
         private void FormOpsRules_FormClosed(object sender, FormClosedEventArgs e)

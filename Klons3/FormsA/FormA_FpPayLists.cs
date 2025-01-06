@@ -437,10 +437,8 @@ namespace KlonsA.Forms
         private void CheckEnableRows()
         {
             bool enabled = 
-                dgvList.CurrentCell != null && 
-                bsList.Count > 0 && 
-                dgvList.CurrentRow != null &&
-                !dgvList.CurrentRow.IsNewRow;
+                dgvList.CurrentCell != null && bsList.Count > 0 && 
+                dgvList.CurrentRow != null && !dgvList.CurrentRow.IsNewRow;
             SetControlEnabled(dgvRows, enabled);
             CheckEnableSGR();
         }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Klons3.ModelsF;
 using KlonsF.Classes;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
@@ -25,10 +26,35 @@ namespace KlonsF.Forms
             bsAcPlan.Fill();
         }
 
+        public static string GetAcP1(string acp1)
+        {
+            var fm = new Form_AcPlan();
+            fm.SelectedValueStr = acp1;
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.FindAcP1(acp1);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValueStr;
+        }
+
+        public void FindAcP1(string acp1)
+        {
+            if (bsAcPlan.Count == 0) return;
+            if (acp1.IsNOE()) return;
+            for (int i = 0; i < bsAcPlan.Count; i++)
+            {
+                var dr = bsAcPlan.GetItem<F_ACP21>(i);
+                if (dr.AC == acp1)
+                {
+                    bsAcPlan.Position = i;
+                    return;
+                }
+            }
+        }
+
         private void FormAcPlan_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
         }
 
         private void SelectCurrent()
@@ -95,6 +121,12 @@ namespace KlonsF.Forms
                     Predicate<ModelsF.F_ACP23> filter = x => x.NAME.ContainsCI(s);
                     bsAcPlan.SetFilter(filter);
                 }
+            }
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tbSearch.Text = null;
+                bsAcPlan.RemoveFilter();
+                e.Handled = true;
             }
         }
 

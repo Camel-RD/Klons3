@@ -10,6 +10,7 @@ public partial class M_ROWS : EntityBase
     public int ID { get; set; }
     public int IDDOC { get; set; }
     public int IDITEM { get; set; } = 1;
+    public int? IDITEMTEXT { get; set; } = 1;
     public int IDPVNRATE { get; set; } = 1;
     public int UNITS { get; set; } = 1;
     public int? IDCREDROW { get; set; }
@@ -31,6 +32,7 @@ public partial class M_ROWS : EntityBase
     public virtual M_ITEMS Item { get; set; }
     public virtual M_PVNRATES PVNRate { get; set; }
     public virtual M_UNITS UnitsRow { get; set; }
+    public virtual M_ITEMS_TEXTS ItemText { get; set; }
 
     public bool XIsServices => Item.XIsServices;
 

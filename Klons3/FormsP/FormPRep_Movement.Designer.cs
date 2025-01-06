@@ -150,7 +150,7 @@
             toolStrip2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip2.GripMargin = new System.Windows.Forms.Padding(0);
             toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip2.ImageScalingSize = new System.Drawing.Size(22, 22);
+            toolStrip2.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tsbPrevMonth, tsbNextMonth });
             toolStrip2.Location = new System.Drawing.Point(284, 3);
             toolStrip2.Name = "toolStrip2";
@@ -202,7 +202,7 @@
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripButton1, toolStripButton2 });
             toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             toolStrip1.Location = new System.Drawing.Point(621, 39);

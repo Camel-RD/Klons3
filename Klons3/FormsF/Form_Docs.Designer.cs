@@ -110,7 +110,7 @@ namespace KlonsF.Forms
             dgcDocsDocTyp = new MyDgvMcCBColumn();
             dgcDocsDocSt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDocsDocNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dgcDocsClid = new MyDgvMcCBColumn();
+            dgcDocsClid = new MyDgvTextboxColumn2();
             dgcDocsDescr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDocsSumm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcDocsPVN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -419,7 +419,7 @@ namespace KlonsF.Forms
             bnavNav.DeleteItem = bindingNavigatorDeleteItem;
             bnavNav.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavNav.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavNav.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, ToolStripButtonCopy, bindingNavigatorDeleteItem, toolStripButtonInfo, oPSdBindingNavigatorSaveItem, tsbSearchPrev, tsbSearch, tsbSearchNext, tsbSum });
             bnavNav.Location = new System.Drawing.Point(0, 414);
             bnavNav.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -601,7 +601,7 @@ namespace KlonsF.Forms
             // 
             toolStrip1.AllowMerge = false;
             toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            toolStrip1.ImageScalingSize = new System.Drawing.Size(21, 21);
+            toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tbsRefresh, toolStripButton1, toolStripDropDownButton1, tsbIeraksti });
             toolStrip1.Location = new System.Drawing.Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -805,22 +805,12 @@ namespace KlonsF.Forms
             // 
             // dgcDocsClid
             // 
-            dgcDocsClid.ColumnNames = new string[]
-    {
-    "clid",
-    "name"
-    };
-            dgcDocsClid.ColumnWidths = "120;400";
             dgcDocsClid.DataPropertyName = "CLID";
             dgcDocsClid.DataSource = bsClid;
-            dgcDocsClid.DisplayMember = "ClId";
+            dgcDocsClid.DisplayMember = "CLID";
             dgcDocsClid.HeaderText = "Persona";
-            dgcDocsClid.MaxDropDownItems = 15;
-            dgcDocsClid.MinimumWidth = 9;
             dgcDocsClid.Name = "dgcDocsClid";
-            dgcDocsClid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            dgcDocsClid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            dgcDocsClid.ValueMember = "ClId";
+            dgcDocsClid.ValueMember = "CLID";
             dgcDocsClid.Width = 120;
             // 
             // dgcDocsDescr
@@ -932,7 +922,6 @@ namespace KlonsF.Forms
             MyToolStrip = toolStrip1;
             Name = "Form_Docs";
             Text = "Dokumentu reģistrs";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             FormClosing += FormDocs_FormClosing;
             FormClosed += FormDocs_FormClosed;
             Load += FormDocs_Load;
@@ -1029,7 +1018,7 @@ namespace KlonsF.Forms
         private MyDgvMcCBColumn dgcDocsDocTyp;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsDocSt;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsDocNr;
-        private MyDgvMcCBColumn dgcDocsClid;
+        private MyDgvTextboxColumn2 dgcDocsClid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsDescr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsSumm;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcDocsPVN;

@@ -16,10 +16,11 @@ using Klons3.ModelsF;
 using Klons3.ModelsFRep;
 using Equin.ApplicationFramework;
 using KlonsF.FormsReportParams;
+using KlonsLIB.Components;
 
 namespace KlonsF.Forms
 {
-    public partial class Form_Docs : MyFormBaseF
+    public partial class Form_Docs : MyFormBaseF, IMyDgvTextboxEditingControlEvents2
     {
         private DbContextF MyDataSet => MyData.DbContextF;
 
@@ -30,6 +31,7 @@ namespace KlonsF.Forms
             LoadColumnWidthsFromSettings();
             FormInitOnLoad();
             toolStrip1.Visible = true;
+            dgvOps.DisableAllColumnSorting();
             GC.Collect();
             GC.WaitForPendingFinalizers();
             GC.GetTotalMemory(true);
@@ -77,7 +79,6 @@ namespace KlonsF.Forms
 
         private void FormDocs_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
             CheckSave();
         }
 
@@ -1738,6 +1739,15 @@ namespace KlonsF.Forms
                 e.Handled = true;
                 return;
             }
+            if (e.KeyCode == Keys.F4)
+            {
+                if (dgvDocs.CurrentCell.ColumnIndex == dgcDocsClid.Index)
+                {
+                    GetClId();
+                }
+                e.Handled = true;
+                return;
+            }
             if (e.KeyCode == Keys.F5)
             {
                 dgvDocsGetCellValue(sender, dgvDocs.CurrentCell.ColumnIndex);
@@ -2435,7 +2445,7 @@ namespace KlonsF.Forms
             if (row == null || setnull)
             {
                 bsOPS.KillLists();
-                dgvOps.Enabled = false;
+                SetControlEnabled(dgvOps, false);
             }
             else
             {
@@ -2473,6 +2483,56 @@ namespace KlonsF.Forms
             dgvDocs.DataSource = bsOPSd;
             dgvOps.DataSource = bsOPS;
             CheckOpsGrid();
+        }
+
+        private bool CanEditDocsCurrentCell()
+        {
+            if (bsOPSd.Count == 0 || bsOPSd.Current == null) return false;
+            return true;
+        }
+
+        private void SetCurrentDocEditorValue(string value)
+        {
+            if (ActiveControl == null) return;
+            try
+            {
+                dgvDocs.BeginEdit(false);
+                if (dgvDocs.EditingControl is MyMcComboBox cb1)
+                {
+                    cb1.SelectedValue = value;
+                }
+                else if (dgvDocs.EditingControl is MyPickRowTextBox2 cb2)
+                {
+                    cb2.SelectedValue = value;
+                }
+                dgvDocs.EndEdit();
+            }
+            catch (Exception) { }
+        }
+
+        public string GetClId(string clid)
+        {
+            return Form_Persons.GetClId(clid);
+        }
+
+        public void GetClId()
+        {
+            if (!CanEditDocsCurrentCell()) return;
+            var clid = dgvDocs.IsCurrentCellInEditMode ?
+                dgvDocs.EditingControl.Text :
+                dgvDocs.CurrentCell.FormattedValue as string;
+            var rt = GetClId(clid);
+            if (rt == null) return;
+            SetCurrentDocEditorValue(rt);
+        }
+
+        void IMyDgvTextboxEditingControlEvents2.OnButtonClicked(MyDgvTextboxEditingControl2 control)
+        {
+            if (control.DataSource == bsClid)
+            {
+                GetClId();
+                return;
+            }
         }
 
     }

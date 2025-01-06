@@ -30,7 +30,6 @@ namespace KlonsF.Forms
 
         private void Form_Docs0_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
             CheckSave();
         }
 

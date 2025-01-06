@@ -18,6 +18,7 @@ using System.Diagnostics;
 using KlonsA.Classes;
 using KlonsP.Classes;
 using KlonsM.Classes;
+using System.IO;
 
 namespace KlonsF;
 
@@ -313,20 +314,22 @@ public partial class Form_Main : MyMainFormBase
     }
 
 
+    private bool BetaMWarningShow = false;
 
     private void WarnBetaM()
     {
-        if (!MyData.Settings.DontShowBetaWarning)
+        if (!MyData.Settings.DontShowBetaWarning && !BetaMWarningShow)
         {
             ShowWarning("Darbs pie programmas noliktavas moduļa turpinās. " +
                 "Tas tiek piedāvāts testēšanas nolūkiem. " +
-                "Lietotjāji tiek aicināti izmēģināt noliktavas moduļa iespējas " +
+                "Lietotāji tiek aicināti izmēģināt noliktavas moduļa iespējas " +
                 "un sūtīt savus ieteikumus tā uzlabojumiem un papildinājumiem.");
+            BetaMWarningShow = true;
         }
     }
     public T ShowFormM<T>() where T : MyFormBaseF, new()
     {
-        bool loaded = KlonsM.Classes.DataLoaderM.CheckLoad();
+        bool loaded = DataLoaderM.CheckLoad();
         if (!loaded) return null;
         WarnBetaM();
         var f = ShowForm<T>() as MyFormBaseF;
@@ -334,7 +337,7 @@ public partial class Form_Main : MyMainFormBase
     }
     public T ShowFormM<T>(Func<T> func_createform) where T : MyFormBaseF
     {
-        bool loaded = KlonsM.Classes.DataLoaderM.CheckLoad();
+        bool loaded = DataLoaderM.CheckLoad();
         if (!loaded) return null;
         WarnBetaM();
         var f = ShowForm(func_createform);
@@ -342,7 +345,7 @@ public partial class Form_Main : MyMainFormBase
     }
     public T ShowFormMDialog<T>() where T : MyFormBaseF, new()
     {
-        bool loaded = KlonsM.Classes.DataLoaderM.CheckLoad();
+        bool loaded = DataLoaderM.CheckLoad();
         if (!loaded) return null;
         var f = ShowFormDialog<T>() as MyFormBaseF;
         if (f == null) return null;
@@ -350,7 +353,7 @@ public partial class Form_Main : MyMainFormBase
     }
     public T ShowFormMDialogO<T>(Action<object> onselectedobject) where T : MyFormBaseF, new()
     {
-        bool loaded = KlonsM.Classes.DataLoaderM.CheckLoad();
+        bool loaded = DataLoaderM.CheckLoad();
         if (!loaded) return null;
         var f = ShowFormDialog<T>() as MyFormBaseF;
         if (f == null) return null;
@@ -427,13 +430,13 @@ public partial class Form_Main : MyMainFormBase
     private void miAtvērtProgrammasMapi_Click(object sender, EventArgs e)
     {
         var myfolder = KlonsData.GetBasePath();
-        try { Process.Start(myfolder); } catch (Exception) { }
+        try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
     }
     private void miAtvērtRezervesKopijuMapi_Click(object sender, EventArgs e)
     {
         var myfolder = MyData.GetBackUpFolder();
         if (myfolder.IsNOE()) return;
-        try { Process.Start(myfolder); } catch (Exception) { }
+        try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
     }
     private void miReloadDataF_Click(object sender, EventArgs e)
     {
@@ -624,6 +627,11 @@ public partial class Form_Main : MyMainFormBase
     private void miPPamatlīdzekļi_Click(object sender, EventArgs e)
     {
         ShowFormP<KlonsP.Forms.FormP_Items>();
+    }
+
+    private void miPNotikumi_Click(object sender, System.EventArgs e)
+    {
+        ShowFormP<KlonsP.Forms.FormP_Events>();
     }
 
     private void miPTaxDeprecYR_Click(object sender, EventArgs e)
@@ -989,7 +997,7 @@ public partial class Form_Main : MyMainFormBase
     private void miFApraksts_Click(object sender, EventArgs e)
     {
         var myfolder = MyData.GetManualsPath();
-        try { Process.Start(myfolder); } catch (Exception) { }
+        try { Process.Start("explorer.exe", myfolder); } catch (Exception) { }
     }
     private void miParProgrammu_Click(object sender, EventArgs e)
     {

@@ -19,7 +19,7 @@ Merge State = Unchanged will revert changes
 
 ClearDbSet for DocsM
 
-Delet1
+Delete
 1. remove from collection
 2. remive from CTX
 
@@ -31,6 +31,15 @@ Limit count of entities shown for errors
 
 check cascade delete configs
 
-MergeUpdates -> TS also need to be updated
+MergeUpdates -> TS also needs to be updated
 
- 
+Reports 
+	in multi user scenario
+	when final report row shown is made of 
+		soma data from DB
+	   +some data from loaded DataSet
+	DataSet may be missing required data to fixup final report row
+	Resolution:
+	1. Load all required data
+	2. Catch case of missing data and abort report with warning message
+		- user reloads data

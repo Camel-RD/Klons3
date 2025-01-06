@@ -9,6 +9,7 @@ public partial class M_UNITS : EntityBase
     public int ID { get; set; }
     public string CODE { get; set; } = "?";
     public string NAME { get; set; } = "?";
+    public string CODE2 { get; set; }
     public DateTime TS { get; set; }
 
     public override string GetInfoView()

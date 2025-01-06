@@ -79,7 +79,6 @@ namespace KlonsA.Forms
         {
             SetupToolStrips();
 
-            WindowState = FormWindowState.Maximized;
             splitContainer2.SplitterDistance = splitContainer2.Height
                 - (int)((float)80 * ScaleFactor.Height);
             //splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;

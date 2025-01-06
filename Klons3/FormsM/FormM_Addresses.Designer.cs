@@ -1,4 +1,6 @@
 ﻿
+using KlonsM.Classes;
+
 namespace KlonsM.FormsM
 {
     partial class FormM_Addresses
@@ -38,6 +40,12 @@ namespace KlonsM.FormsM
             this.dgcIdCountry = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bsCountry = new KlonsLIB.Data.MyBindingSourceEf(this.components);
             this.dgcAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcStreet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcParish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcPostalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcComments = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcIdStore = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsRows = new KlonsLIB.Data.MyBindingSourceEf2(this.components);
@@ -66,7 +74,7 @@ namespace KlonsM.FormsM
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbPersonName});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -92,6 +100,12 @@ namespace KlonsM.FormsM
             this.dgcName,
             this.dgcIdCountry,
             this.dgcAddress,
+            this.dgcStreet,
+            this.dgcCity,
+            this.dgcState,
+            this.dgcParish,
+            this.dgcPostalCode,
+            this.dgcComments,
             this.dgcId,
             this.dgcIdStore});
             this.dgvRows.DataSource = this.bsRows;
@@ -145,6 +159,48 @@ namespace KlonsM.FormsM
             this.dgcAddress.Name = "dgcAddress";
             this.dgcAddress.Width = 400;
             // 
+            // dgcStreet
+            // 
+            dgcStreet.DataPropertyName = "STREET";
+            dgcStreet.HeaderText = "iela, nr.";
+            dgcStreet.Name = "dgcStreet";
+            dgcStreet.Width = 125;
+            // 
+            // dgcCity
+            // 
+            dgcCity.DataPropertyName = "CITY";
+            dgcCity.HeaderText = "pilsēta";
+            dgcCity.Name = "dgcCity";
+            dgcCity.Width = 125;
+            // 
+            // dgcState
+            // 
+            dgcState.DataPropertyName = "STATE";
+            dgcState.HeaderText = "novads";
+            dgcState.Name = "dgcState";
+            dgcState.Width = 125;
+            // 
+            // dgcParish
+            // 
+            dgcParish.DataPropertyName = "PARISH";
+            dgcParish.HeaderText = "pagasts";
+            dgcParish.Name = "dgcParish";
+            dgcParish.Width = 125;
+            // 
+            // dgcPostalCode
+            // 
+            dgcPostalCode.DataPropertyName = "POSTALCODE";
+            dgcPostalCode.HeaderText = "indeks";
+            dgcPostalCode.Name = "dgcPostalCode";
+            dgcPostalCode.Width = 90;
+            // 
+            // dgcComments
+            // 
+            dgcComments.DataPropertyName = "COMMENTS";
+            dgcComments.HeaderText = "komentārs";
+            dgcComments.Name = "dgcComments";
+            dgcComments.Width = 200;
+            // 
             // dgcId
             // 
             this.dgcId.DataPropertyName = "ID";
@@ -165,7 +221,7 @@ namespace KlonsM.FormsM
             // 
             // bsRows
             // 
-            this.bsRows.DataMember = "AddressesRows";
+            this.bsRows.DataMember = "AddressesView";
             this.bsRows.DataSource = this.bsStores;
             this.bsRows.UseDataGridView = this.dgvRows;
             this.bsRows.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.bsRows_ListChanged);
@@ -183,7 +239,7 @@ namespace KlonsM.FormsM
             this.bNav.DataGrid = this.dgvRows;
             this.bNav.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -350,6 +406,12 @@ namespace KlonsM.FormsM
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
         private System.Windows.Forms.DataGridViewComboBoxColumn dgcIdCountry;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcStreet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcParish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcPostalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcComments;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcIdStore;
     }

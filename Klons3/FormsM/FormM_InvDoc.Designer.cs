@@ -132,7 +132,7 @@ namespace KlonsM.FormsM
             this.bNav.CountItemFormat = " no {0}";
             this.bNav.DeleteItem = null;
             this.bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -416,7 +416,7 @@ namespace KlonsM.FormsM
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dokumentsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(41, 18);
@@ -477,7 +477,6 @@ namespace KlonsM.FormsM
             this.sgrDoc.ColumnWidth1 = 20;
             this.sgrDoc.ColumnWidth2 = 90;
             this.sgrDoc.ColumnWidth3 = 180;
-            this.sgrDoc.DefaultHeight = 22;
             this.sgrDoc.DefaultWidth = 20;
             this.sgrDoc.Dock = System.Windows.Forms.DockStyle.Top;
             this.sgrDoc.EnableSort = true;

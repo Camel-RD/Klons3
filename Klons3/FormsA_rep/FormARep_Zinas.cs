@@ -34,7 +34,6 @@ namespace KlonsA.Forms
 
         private void FormRep_Zinas_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
         }
 
         public void LoadParams()

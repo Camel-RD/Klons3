@@ -38,6 +38,7 @@ namespace KlonsM.FormsM
             this.dgvRows = new KlonsLIB.Components.MyDataGridView();
             this.dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcCode2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgcId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -64,7 +65,7 @@ namespace KlonsM.FormsM
             this.bNav.DataGrid = this.dgvRows;
             this.bNav.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bNav.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bNav.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bNav.ImageScalingSize = new System.Drawing.Size(16, 16);
             this.bNav.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -123,6 +124,7 @@ namespace KlonsM.FormsM
             this.dgvRows.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgcCode,
             this.dgcName,
+            this.dgcCode2,
             this.dgcId});
             this.dgvRows.DataSource = this.bsUnits;
             this.dgvRows.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -155,6 +157,13 @@ namespace KlonsM.FormsM
             this.dgcName.MinimumWidth = 8;
             this.dgcName.Name = "dgcName";
             this.dgcName.Width = 200;
+            // 
+            // dgcCode2
+            // 
+            this.dgcCode2.DataPropertyName = "CODE2";
+            this.dgcCode2.HeaderText = "kods2";
+            this.dgcCode2.Name = "dgcCode2";
+            this.dgcCode2.Width = 80;
             // 
             // dgcId
             // 
@@ -282,6 +291,7 @@ namespace KlonsM.FormsM
         private KlonsLIB.Components.MyDataGridView dgvRows;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcCode2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcId;
     }
 }

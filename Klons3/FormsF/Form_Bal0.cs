@@ -30,7 +30,6 @@ namespace KlonsF.Forms
         private void FormBal0_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
             bsBal0.ListItemPropertyChanged += BsBal0_ListItemPropertyChanged;
         }
 

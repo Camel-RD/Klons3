@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Equin.ApplicationFramework;
+using Klons3.ModelsF;
 using KlonsF.Classes;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
@@ -26,10 +27,10 @@ namespace KlonsF.Forms
             bsAcPVN.Fill();
         }
 
+
         private void FormAcPVN_Load(object sender, EventArgs e)
         {
             CheckSave();
-            WindowState = FormWindowState.Maximized;
             bsAcP5.ListItemPropertyChanged += BsAcP5_ListItemPropertyChanged;
         }
 
@@ -45,6 +46,31 @@ namespace KlonsF.Forms
             var drp = MyData.DbContextF.F_ACPVN.Find(dr.IDX);
             if (drp == null) return;
             dr.NAME = drp.NM.LeftMax(150);
+        }
+        public static string GetAcPVN(string acpvn)
+        {
+            var fm = new Form_AcPVN();
+            fm.SelectedValueStr = acpvn;
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.FindAcPVN(acpvn);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValueStr;
+        }
+
+        public void FindAcPVN(string acppvn)
+        {
+            if (bsAcP5.Count == 0) return;
+            if (acppvn.IsNOE()) return;
+            for (int i = 0; i < bsAcP5.Count; i++)
+            {
+                var dr = bsAcP5.GetItem<F_ACP25>(i);
+                if (dr.IDX == acppvn)
+                {
+                    bsAcP5.Position = i;
+                    return;
+                }
+            }
         }
 
         private void SelectCurrent()

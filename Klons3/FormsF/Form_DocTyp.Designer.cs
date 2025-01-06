@@ -96,7 +96,7 @@ namespace KlonsF.Forms
             bnavDocTyp.DeleteItem = bindingNavigatorDeleteItem;
             bnavDocTyp.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavDocTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavDocTyp.ImageScalingSize = new System.Drawing.Size(21, 21);
+            bnavDocTyp.ImageScalingSize = new System.Drawing.Size(16, 16);
             bnavDocTyp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripLabel1, bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
             bnavDocTyp.Location = new System.Drawing.Point(0, 476);
             bnavDocTyp.MoveFirstItem = bindingNavigatorMoveFirstItem;
@@ -475,7 +475,6 @@ namespace KlonsF.Forms
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Form_DocTyp";
             Text = "Dokumentu veidi";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FormDocTyp_Load;
             Shown += FormDocTyp_Shown;
             ((System.ComponentModel.ISupportInitialize)bnavDocTyp).EndInit();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Klons3.ModelsF;
 using KlonsF.Classes;
 using KlonsLIB.Components;
 using KlonsLIB.Data;
@@ -25,9 +26,34 @@ namespace KlonsF.Forms
             CheckSave();
         }
 
+        public static string GetAcP4(string acp4)
+        {
+            var fm = new Form_AcP4();
+            fm.SelectedValueStr = acp4;
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.FindAcP4(acp4);
+            var ret = fm.ShowMyDialogModal();
+            if (ret != DialogResult.OK) return null;
+            return fm.SelectedValueStr;
+        }
+
+        public void FindAcP4(string acp4)
+        {
+            if (bsAcP4.Count == 0) return;
+            if (acp4.IsNOE()) return;
+            for (int i = 0; i < bsAcP4.Count; i++)
+            {
+                var dr = bsAcP4.GetItem<F_ACP24>(i);
+                if (dr.IDX == acp4)
+                {
+                    bsAcP4.Position = i;
+                    return;
+                }
+            }
+        }
+
         private void FormAcP4_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
             CheckSave();
         }
 

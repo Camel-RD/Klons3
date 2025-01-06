@@ -43,6 +43,7 @@
             this.grCompAddr3 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             this.grCompAddr4 = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             this.grCompAddrG = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
+            this.grCompEMail = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             this.grManTitle = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTitle();
             this.grCompMName = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
             this.grCompMpk = new KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA();
@@ -83,6 +84,7 @@
             this.myGrid1.RowList.Add(this.grCompAddr3);
             this.myGrid1.RowList.Add(this.grCompAddr4);
             this.myGrid1.RowList.Add(this.grCompAddrG);
+            this.myGrid1.RowList.Add(this.grCompEMail);
             this.myGrid1.RowList.Add(this.grManTitle);
             this.myGrid1.RowList.Add(this.grCompMName);
             this.myGrid1.RowList.Add(this.grCompMpk);
@@ -171,7 +173,7 @@
             this.grCompAddr1.EditorTemplateName = "grtString";
             this.grCompAddr1.GridPropertyName = "_CompAddr1";
             this.grCompAddr1.Name = "grCompAddr1";
-            this.grCompAddr1.RowTitle = "Adrese: rinda 1";
+            this.grCompAddr1.RowTitle = "Iela, nr.";
             this.grCompAddr1.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grCompAddr2
@@ -180,7 +182,7 @@
             this.grCompAddr2.EditorTemplateName = "grtString";
             this.grCompAddr2.GridPropertyName = "_CompAddr2";
             this.grCompAddr2.Name = "grCompAddr2";
-            this.grCompAddr2.RowTitle = "Adrese: rinda 2";
+            this.grCompAddr2.RowTitle = "Pilsēta";
             this.grCompAddr2.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grCompAddr3
@@ -189,7 +191,7 @@
             this.grCompAddr3.EditorTemplateName = "grtString";
             this.grCompAddr3.GridPropertyName = "_CompAddr3";
             this.grCompAddr3.Name = "grCompAddr3";
-            this.grCompAddr3.RowTitle = "Adrese: rinda 3";
+            this.grCompAddr3.RowTitle = "Novads";
             this.grCompAddr3.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grCompAddr4
@@ -198,7 +200,7 @@
             this.grCompAddr4.EditorTemplateName = "grtString";
             this.grCompAddr4.GridPropertyName = "_CompAddr4";
             this.grCompAddr4.Name = "grCompAddr4";
-            this.grCompAddr4.RowTitle = "Adrese: rinda 4";
+            this.grCompAddr4.RowTitle = "Pagasts";
             this.grCompAddr4.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grCompAddrG
@@ -209,6 +211,15 @@
             this.grCompAddrG.Name = "grCompAddrG";
             this.grCompAddrG.RowTitle = "Preču izsn. adrese";
             this.grCompAddrG.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
+            // 
+            // grCompEMail
+            // 
+            this.grCompEMail.DataMember = null;
+            this.grCompEMail.EditorTemplateName = "grtString";
+            this.grCompEMail.GridPropertyName = "_CompEMail";
+            this.grCompEMail.Name = "grCompEMail";
+            this.grCompEMail.RowTitle = "E-pasts";
+            this.grCompEMail.RowValueType = KlonsLIB.MySourceGrid.GridRows.EMyGridRowValueType.String;
             // 
             // grManTitle
             // 
@@ -349,5 +360,6 @@
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grBankName;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grBankAcc;
         private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grtString;
+        private KlonsLIB.MySourceGrid.GridRows.MyGridRowTextBoxA grCompEMail;
     }
 }

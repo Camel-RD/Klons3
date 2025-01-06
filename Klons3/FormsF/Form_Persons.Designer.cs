@@ -35,12 +35,13 @@ namespace KlonsF.Forms
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Persons));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            MyMcComboBox.MyItem myItem1 = new MyMcComboBox.MyItem();
-            MyMcComboBox.MyItem myItem2 = new MyMcComboBox.MyItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            MyMcComboBox.MyItem myItem3 = new MyMcComboBox.MyItem();
+            MyMcComboBox.MyItem myItem4 = new MyMcComboBox.MyItem();
             bnavPersons = new MyBindingNavigator();
             bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            bsPersons = new KlonsLIB.Data.MyBindingSourceEf(components);
+            bsPersons = new MyBindingSourceEf(components);
+            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             dgvPersons = new MyDataGridView();
             dgcClid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +54,11 @@ namespace KlonsF.Forms
             dgcAddr2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcATK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcBankId = new MyDgvMcCBColumn();
-            bsBanks = new KlonsLIB.Data.MyBindingSourceEf(components);
+            bsBanks = new MyBindingSourceEf(components);
             dgcBank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcBankAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             dgcAct = new MyDgvCheckBoxColumn();
-            bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -75,11 +75,13 @@ namespace KlonsF.Forms
             tbClid = new MyPickRowTextBox();
             cbAct = new MyMcFlatComboBox();
             label3 = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)bnavPersons).BeginInit();
             bnavPersons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsPersons).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvPersons).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsBanks).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // bnavPersons
@@ -92,9 +94,8 @@ namespace KlonsF.Forms
             bnavPersons.DeleteItem = bindingNavigatorDeleteItem;
             bnavPersons.Dock = System.Windows.Forms.DockStyle.Bottom;
             bnavPersons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            bnavPersons.ImageScalingSize = new System.Drawing.Size(21, 21);
             bnavPersons.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { bindingNavigatorMoveFirstItem, bindingNavigatorMovePreviousItem, bindingNavigatorSeparator, bindingNavigatorPositionItem, bindingNavigatorCountItem, bindingNavigatorSeparator1, bindingNavigatorMoveNextItem, bindingNavigatorMoveLastItem, bindingNavigatorSeparator2, bindingNavigatorAddNewItem, bindingNavigatorDeleteItem, tsbSave });
-            bnavPersons.Location = new System.Drawing.Point(0, 516);
+            bnavPersons.Location = new System.Drawing.Point(0, 352);
             bnavPersons.MoveFirstItem = bindingNavigatorMoveFirstItem;
             bnavPersons.MoveLastItem = bindingNavigatorMoveLastItem;
             bnavPersons.MoveNextItem = bindingNavigatorMoveNextItem;
@@ -102,8 +103,8 @@ namespace KlonsF.Forms
             bnavPersons.Name = "bnavPersons";
             bnavPersons.PositionItem = bindingNavigatorPositionItem;
             bnavPersons.SaveItem = null;
-            bnavPersons.Size = new System.Drawing.Size(901, 28);
-            bnavPersons.TabIndex = 0;
+            bnavPersons.Size = new System.Drawing.Size(913, 25);
+            bnavPersons.TabIndex = 2;
             bnavPersons.Text = "bindingNavigator1";
             bnavPersons.ItemDeleting += bnavPersons_ItemDeleting;
             // 
@@ -112,7 +113,7 @@ namespace KlonsF.Forms
             bindingNavigatorAddNewItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorAddNewItem.Image");
             bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(71, 25);
+            bindingNavigatorAddNewItem.Size = new System.Drawing.Size(66, 22);
             bindingNavigatorAddNewItem.Text = "Jauns";
             bindingNavigatorAddNewItem.ToolTipText = "Jauns (Shift+Insert)";
             // 
@@ -121,28 +122,35 @@ namespace KlonsF.Forms
             bsPersons.MyDataSource = new KlonsLIB.ObjectSelector.KlonsDbSetSelector("KlonsData", "F_PERSONS");
             bsPersons.ListChanged += bsPersons_ListChanged;
             // 
+            // bindingNavigatorCountItem
+            // 
+            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 22);
+            bindingNavigatorCountItem.Text = " no {0}";
+            bindingNavigatorCountItem.ToolTipText = "Skaits";
+            // 
             // dgvPersons
             // 
-            dgvPersons.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dgvPersons.AutoGenerateColumns = false;
             dgvPersons.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvPersons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvPersons.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvPersons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPersons.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgcClid, dgcName, dgcRegNr, dgcPVNRegNr, dgcTP, dgcTP2, dgcTP3, dgcAddr, dgcAddr2, dgcATK, dgcBankId, dgcBank, dgcBankAcc, dgcPhone, dgcAct });
             dgvPersons.DataSource = bsPersons;
-            dgvPersons.Location = new System.Drawing.Point(0, 29);
+            dgvPersons.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvPersons.Location = new System.Drawing.Point(0, 28);
             dgvPersons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dgvPersons.Name = "dgvPersons";
             dgvPersons.RowHeadersWidth = 62;
-            dgvPersons.Size = new System.Drawing.Size(901, 483);
-            dgvPersons.TabIndex = 3;
+            dgvPersons.Size = new System.Drawing.Size(913, 324);
+            dgvPersons.TabIndex = 1;
             dgvPersons.MyKeyDown += dgvPersons_MyKeyDown;
             dgvPersons.MyCheckForChanges += dgvPersons_MyCheckForChanges;
             dgvPersons.CellDoubleClick += dgvPersons_CellDoubleClick;
@@ -331,19 +339,12 @@ namespace KlonsF.Forms
             dgcAct.TrueValue = "1";
             dgcAct.Width = 54;
             // 
-            // bindingNavigatorCountItem
-            // 
-            bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            bindingNavigatorCountItem.Size = new System.Drawing.Size(50, 25);
-            bindingNavigatorCountItem.Text = " no {0}";
-            bindingNavigatorCountItem.ToolTipText = "Skaits";
-            // 
             // bindingNavigatorDeleteItem
             // 
             bindingNavigatorDeleteItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorDeleteItem.Image");
             bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(69, 25);
+            bindingNavigatorDeleteItem.Size = new System.Drawing.Size(64, 22);
             bindingNavigatorDeleteItem.Text = "Dzēst";
             bindingNavigatorDeleteItem.ToolTipText = "Dzēst (Ctrl+Delete)";
             // 
@@ -353,7 +354,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveFirstItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveFirstItem.Image");
             bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(25, 25);
+            bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveFirstItem.Text = "Iet uz pirmo";
             // 
             // bindingNavigatorMovePreviousItem
@@ -362,13 +363,13 @@ namespace KlonsF.Forms
             bindingNavigatorMovePreviousItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMovePreviousItem.Image");
             bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(25, 25);
+            bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMovePreviousItem.Text = "Iet uz iepriekšējo";
             // 
             // bindingNavigatorSeparator
             // 
             bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 28);
+            bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -383,7 +384,7 @@ namespace KlonsF.Forms
             // bindingNavigatorSeparator1
             // 
             bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 28);
+            bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -391,7 +392,7 @@ namespace KlonsF.Forms
             bindingNavigatorMoveNextItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveNextItem.Image");
             bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(25, 25);
+            bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveNextItem.Text = "Iet uz nākošo";
             bindingNavigatorMoveNextItem.ToolTipText = "Iet uz nākošo";
             // 
@@ -401,48 +402,48 @@ namespace KlonsF.Forms
             bindingNavigatorMoveLastItem.Image = (System.Drawing.Image)resources.GetObject("bindingNavigatorMoveLastItem.Image");
             bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(25, 25);
+            bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             bindingNavigatorMoveLastItem.Text = "Iet uz pēdējo";
             // 
             // bindingNavigatorSeparator2
             // 
             bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 28);
+            bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tsbSave
             // 
             tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             tsbSave.Image = (System.Drawing.Image)resources.GetObject("tsbSave.Image");
             tsbSave.Name = "tsbSave";
-            tsbSave.Size = new System.Drawing.Size(25, 25);
+            tsbSave.Size = new System.Drawing.Size(23, 22);
             tsbSave.Text = "Saglabāt datus";
             tsbSave.Click += tsbSave_Click;
             // 
             // tbSearch
             // 
             tbSearch.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
-            tbSearch.Location = new System.Drawing.Point(231, 3);
+            tbSearch.Location = new System.Drawing.Point(229, 3);
             tbSearch.Margin = new System.Windows.Forms.Padding(2);
             tbSearch.Name = "tbSearch";
             tbSearch.Size = new System.Drawing.Size(138, 23);
-            tbSearch.TabIndex = 2;
+            tbSearch.TabIndex = 1;
             tbSearch.Enter += tbSearch_Enter;
             tbSearch.KeyPress += tbSearch_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(6, 5);
+            label1.Location = new System.Drawing.Point(4, 5);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(42, 17);
-            label1.TabIndex = 4;
+            label1.TabIndex = 3;
             label1.Text = "kods:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(174, 5);
+            label2.Location = new System.Drawing.Point(172, 5);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(53, 17);
@@ -455,7 +456,7 @@ namespace KlonsF.Forms
             tbClid.DataMember = null;
             tbClid.DataPropertyName = "CLID";
             tbClid.DataSource = bsPersons;
-            tbClid.Location = new System.Drawing.Point(52, 3);
+            tbClid.Location = new System.Drawing.Point(50, 3);
             tbClid.Margin = new System.Windows.Forms.Padding(2);
             tbClid.Name = "tbClid";
             tbClid.Size = new System.Drawing.Size(108, 23);
@@ -477,54 +478,62 @@ namespace KlonsF.Forms
             cbAct.DropDownStyle = MyMcComboBox.CustomDropDownStyle.DropDownListSimple;
             cbAct.DropDownWidth = 86;
             cbAct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cbAct.FormattingEnabled = false;
             cbAct.GridLineColor = System.Drawing.Color.LightGray;
             cbAct.GridLineHorizontal = false;
             cbAct.GridLineVertical = false;
             cbAct.IntegralHeight = false;
-            myItem1.Col1 = "Visus";
-            myItem2.Col1 = "Aktīvos";
-            cbAct.Items.AddRange(new object[] { myItem1, myItem2 });
+            myItem3.Col1 = "Visus";
+            myItem4.Col1 = "Aktīvos";
+            cbAct.Items.AddRange(new object[] { myItem3, myItem4 });
             cbAct.ItemStrings = new string[]
     {
     "Visus",
     "Aktīvos"
     };
-            cbAct.Location = new System.Drawing.Point(430, 2);
+            cbAct.Location = new System.Drawing.Point(428, 2);
             cbAct.Margin = new System.Windows.Forms.Padding(2);
             cbAct.Name = "cbAct";
             cbAct.Size = new System.Drawing.Size(86, 24);
-            cbAct.TabIndex = 5;
+            cbAct.TabIndex = 2;
             cbAct.ValueMember = "col1";
             cbAct.SelectedIndexChanged += cbAct_SelectedIndexChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(386, 5);
+            label3.Location = new System.Drawing.Point(384, 5);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(40, 17);
-            label3.TabIndex = 4;
+            label3.TabIndex = 5;
             label3.Text = "rādīt:";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(tbClid);
+            panel1.Controls.Add(cbAct);
+            panel1.Controls.Add(tbSearch);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(913, 28);
+            panel1.TabIndex = 0;
             // 
             // Form_Persons
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(901, 544);
-            Controls.Add(cbAct);
-            Controls.Add(tbClid);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(tbSearch);
+            ClientSize = new System.Drawing.Size(913, 377);
             Controls.Add(dgvPersons);
+            Controls.Add(panel1);
             Controls.Add(bnavPersons);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Form_Persons";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Personas";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FormPersons_Load;
             Shown += FormPersons_Shown;
             ((System.ComponentModel.ISupportInitialize)bnavPersons).EndInit();
@@ -533,6 +542,8 @@ namespace KlonsF.Forms
             ((System.ComponentModel.ISupportInitialize)bsPersons).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvPersons).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsBanks).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -576,5 +587,6 @@ namespace KlonsF.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcBankAcc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgcPhone;
         private MyDgvCheckBoxColumn dgcAct;
+        private System.Windows.Forms.Panel panel1;
     }
 }
